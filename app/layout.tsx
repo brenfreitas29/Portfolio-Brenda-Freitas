@@ -4,7 +4,11 @@ import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "Brenda Freitas — Product, Full Stack & AI",
+  metadataBase: new URL("https://brenda-studio-portfolio.vercel.app"),
+  title: {
+    default: "Brenda Freitas — Product, Full Stack & AI",
+    template: "%s | Brenda Freitas",
+  },
   description:
     "Full Stack Developer portfolio focused on Next.js, React, TypeScript, Supabase, SaaS products, CRM workflows and AI automation.",
   keywords: ["Full Stack Developer", "Next.js", "React", "TypeScript", "Supabase", "SaaS", "Frontend Developer", "AI Automation"],
@@ -12,6 +16,12 @@ export const metadata: Metadata = {
     title: "Brenda Freitas — Full Stack Developer",
     description: "SaaS, full-stack products, React/Next.js applications and AI-enabled workflows.",
     type: "website",
+    siteName: "Brenda Freitas Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brenda Freitas — Full Stack Developer",
+    description: "SaaS, full-stack products, React/Next.js applications and AI-enabled workflows.",
   },
 };
 
@@ -27,7 +37,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Prevent browser automatic translation */}
         <meta
           name="google"
           content="notranslate"
@@ -38,10 +47,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="bg-[#24194f] text-white antialiased"
       >
-        {/* Custom cosmic cursor */}
         <CustomCursor />
-
-        {/* Website */}
         {children}
       </body>
     </html>
