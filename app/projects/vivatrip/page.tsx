@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const features = [
@@ -52,9 +53,18 @@ export default function VivaTripProjectPage() {
                   <span className="h-2.5 w-2.5 rounded-full bg-[#e8ce8d]/70" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#9fd8a5]/70" />
                 </div>
-                <img src="https://vivatrip.vercel.app/og.png" alt="VivaTrip live product interface" className="aspect-[16/10] w-full object-cover object-center" />
+                <div className="relative aspect-[16/10] w-full bg-[#f5f6fa]">
+                  <Image
+                    src="/projects/vivatrip-preview-en.jpg"
+                    alt="VivaTrip product interface in English"
+                    fill
+                    priority
+                    className="object-contain object-center"
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                  />
+                </div>
               </div>
-              <p className="mt-4 px-2 text-xs leading-5 text-white/45">Real VivaTrip product preview from the deployed application.</p>
+              <p className="mt-4 px-2 text-xs leading-5 text-white/45">English product preview stored locally in the portfolio for reliable loading.</p>
             </div>
           </div>
         </div>
