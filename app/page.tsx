@@ -24,7 +24,7 @@ const projects = [
     description:
       "A connected travel planning product with secure authentication, saved trips, itinerary workflows and destination-aware pre-trip preparation.",
     tags: ["Next.js", "React", "TypeScript", "Supabase", "SSR Auth"],
-    image: "https://vivatrip.vercel.app/portfolio-preview",
+    image: "/projects/vivatrip-preview-en.jpg",
     href: "/projects/vivatrip",
   },
   {
