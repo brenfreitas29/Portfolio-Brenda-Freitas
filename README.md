@@ -28,3 +28,4 @@ npm start
 - `components/Reveal.tsx`
 - `components/ProjectVisual.tsx`
 - `app/globals.css`
+Portfolio updated
