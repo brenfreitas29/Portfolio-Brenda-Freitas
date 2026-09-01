@@ -1,6 +1,45 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Hair & Skin Clinic — Multilingual Web Experience",
+  description:
+    "Case study of a premium multilingual clinic web experience built with Next.js, React and TypeScript, focused on responsive UX, reusable components and conversion.",
+  keywords: [
+    "Hair and Skin Clinic",
+    "Clinic Website",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Responsive Web Design",
+    "Multilingual Website",
+    "UI UX",
+    "Frontend Development",
+  ],
+  openGraph: {
+    title: "Hair & Skin Clinic — Multilingual Web Experience",
+    description:
+      "A responsive multilingual clinic platform focused on clarity, trust, conversion and reusable frontend architecture.",
+    type: "article",
+    images: [
+      {
+        url: "/projects/hair-skin-clinic.png",
+        width: 1600,
+        height: 900,
+        alt: "Hair and Skin Clinic website interface",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hair & Skin Clinic — Multilingual Web Experience",
+    description:
+      "Next.js clinic web experience focused on responsive UX, multilingual content and reusable components.",
+    images: ["/projects/hair-skin-clinic.png"],
+  },
+};
 
 const highlights = [
   ["Conversion-focused UX", "Information hierarchy and calls to action were designed to help visitors understand services and move naturally toward contact or booking."],
@@ -49,7 +88,7 @@ export default function HairSkinClinicProjectPage() {
           </div>
 
           <div className="mt-16 grid gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
-            {[['Role','Full Stack + UI'],['Product type','Clinic web platform'],['Focus','UX · Responsive · Multilingual']].map(([label,value]) => <div key={label}><p className="text-[10px] uppercase tracking-[0.22em] text-white/35">{label}</p><p className="mt-3 text-sm text-white/80">{value}</p></div>)}
+            {[["Role","Full Stack + UI"],["Product type","Clinic web platform"],["Focus","UX · Responsive · Multilingual"]].map(([label,value]) => <div key={label}><p className="text-[10px] uppercase tracking-[0.22em] text-white/35">{label}</p><p className="mt-3 text-sm text-white/80">{value}</p></div>)}
           </div>
         </div>
       </section>
