@@ -1,6 +1,47 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "FlowDesk — Multi-Tenant WhatsApp CRM SaaS | Brenda Freitas",
+  description:
+    "Case study of FlowDesk, a multi-tenant WhatsApp CRM SaaS built with Next.js, React, Supabase, PostgreSQL, Stripe and AI-enabled workflows.",
+  keywords: [
+    "FlowDesk",
+    "WhatsApp CRM",
+    "SaaS",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Supabase",
+    "PostgreSQL",
+    "Stripe",
+    "Multi-tenant SaaS",
+    "AI Automation",
+  ],
+  openGraph: {
+    title: "FlowDesk — Multi-Tenant WhatsApp CRM SaaS",
+    description:
+      "A full-stack CRM case study covering multi-tenant architecture, Supabase auth and RLS, Kanban workflows, automation and Stripe billing.",
+    type: "article",
+    images: [
+      {
+        url: "/projects/flowdesk-dashboard.jpg",
+        width: 1600,
+        height: 900,
+        alt: "FlowDesk CRM dashboard",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FlowDesk — Multi-Tenant WhatsApp CRM SaaS",
+    description:
+      "Full-stack SaaS case study built with Next.js, Supabase, PostgreSQL, Stripe and AI-enabled workflows.",
+    images: ["/projects/flowdesk-dashboard.jpg"],
+  },
+};
 
 const highlights = [
   ["Multi-tenant architecture", "Tenant-aware product structure designed so multiple companies can use the same SaaS securely."],
@@ -49,7 +90,7 @@ export default function FlowDeskProjectPage() {
           </div>
 
           <div className="mt-16 grid gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
-            {[['Role','Full Stack Developer'],['Product type','Multi-tenant SaaS'],['Focus','CRM · Automation · Billing']].map(([label,value]) => <div key={label}><p className="text-[10px] uppercase tracking-[0.22em] text-white/35">{label}</p><p className="mt-3 text-sm text-white/80">{value}</p></div>)}
+            {[["Role","Full Stack Developer"],["Product type","Multi-tenant SaaS"],["Focus","CRM · Automation · Billing"]].map(([label,value]) => <div key={label}><p className="text-[10px] uppercase tracking-[0.22em] text-white/35">{label}</p><p className="mt-3 text-sm text-white/80">{value}</p></div>)}
           </div>
         </div>
       </section>
