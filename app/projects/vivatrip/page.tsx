@@ -1,5 +1,45 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "VivaTrip — Full Stack Travel SaaS",
+  description:
+    "Case study of VivaTrip, a full-stack travel planning product built with Next.js, React, TypeScript, Supabase, PostgreSQL and secure SSR authentication.",
+  keywords: [
+    "VivaTrip",
+    "Travel SaaS",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Supabase",
+    "PostgreSQL",
+    "SSR Authentication",
+    "Travel Planner",
+    "Full Stack Project",
+  ],
+  openGraph: {
+    title: "VivaTrip — Full Stack Travel SaaS",
+    description:
+      "A full-stack travel product with secure authentication, saved trips, itinerary workflows and destination-aware pre-trip planning.",
+    type: "article",
+    images: [
+      {
+        url: "/projects/vivatrip-preview-en.jpg",
+        width: 1536,
+        height: 1024,
+        alt: "VivaTrip product interface in English",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VivaTrip — Full Stack Travel SaaS",
+    description:
+      "Travel SaaS case study built with Next.js, TypeScript, Supabase, PostgreSQL and SSR authentication.",
+    images: ["/projects/vivatrip-preview-en.jpg"],
+  },
+};
 
 const features = [
   ["Secure authentication", "SSR authentication with protected routes, cookie-based sessions and password recovery flows."],
