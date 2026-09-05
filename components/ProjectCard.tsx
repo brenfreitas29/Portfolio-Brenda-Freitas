@@ -13,6 +13,7 @@ type Project = {
   description: string;
   tags: string[];
   image: string;
+  previewUrl?: string;
   href: string;
   liveUrl: string;
   codeUrl: string;
@@ -52,7 +53,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <motion.div style={{ y: visualY }} className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/15 bg-gradient-to-br from-[#5141a7] via-[#342776] to-[#21174b] p-5 shadow-[0_25px_70px_rgba(20,10,60,0.25)] transition-all duration-500 group-hover:border-[#e9b4e3]/35 md:p-7">
             <div className="relative z-10 h-full overflow-hidden rounded-xl border border-white/15 bg-[#21174b] shadow-2xl transition-transform duration-700 group-hover:scale-[1.015]">
               <div className="relative flex h-11 items-center border-b border-white/10 bg-[#21174b]/95 px-4"><div className="flex gap-2"><span className="h-2.5 w-2.5 rounded-full bg-[#f1a4c8]/60"/><span className="h-2.5 w-2.5 rounded-full bg-[#e8ce8d]/60"/><span className="h-2.5 w-2.5 rounded-full bg-[#9fd8a5]/60"/></div><div className="absolute left-1/2 h-2 w-[30%] -translate-x-1/2 rounded-full bg-white/[0.07]"/></div>
-              <div className="relative h-[calc(100%-2.75rem)] overflow-hidden bg-[#f5f6fa]">{isRemoteImage ? <img src={project.image} alt={`${project.title} project preview`} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-[1200ms] group-hover:scale-[1.025]"/> : <Image src={project.image} alt={`${project.title} project preview`} fill className="object-contain object-center transition-transform duration-[1200ms] group-hover:scale-[1.025]" sizes="(max-width: 1024px) 100vw, 55vw"/>}</div>
+              <div className="relative h-[calc(100%-2.75rem)] overflow-hidden bg-[#f5f6fa]">
+                {project.previewUrl ? (
+                  <div className="pointer-events-none absolute inset-0 overflow-hidden bg-white">
+                    <iframe
+                      src={project.previewUrl}
+                      title={`${project.title} live preview`}
+                      loading="lazy"
+                      tabIndex={-1}
+                      className="absolute left-0 top-0 h-[900px] w-[1600px] origin-top-left border-0"
+                      style={{ transform: "scale(0.42)", transformOrigin: "top left" }}
+                    />
+                  </div>
+                ) : isRemoteImage ? (
+                  <img src={project.image} alt={`${project.title} project preview`} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-[1200ms] group-hover:scale-[1.025]"/>
+                ) : (
+                  <Image src={project.image} alt={`${project.title} project preview`} fill className="object-contain object-center transition-transform duration-[1200ms] group-hover:scale-[1.025]" sizes="(max-width: 1024px) 100vw, 55vw"/>
+                )}
+              </div>
             </div>
           </motion.div>
         </Link>
