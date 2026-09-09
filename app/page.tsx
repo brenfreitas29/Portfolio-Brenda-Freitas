@@ -2,6 +2,7 @@ import StudioHero from "@/components/StudioHero";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsSection from "@/components/SkillsSection";
 import Magnetic from "@/components/Magnetic";
+import SideAtmosphere from "@/components/SideAtmosphere";
 
 const projects = [
   { number: "01", title: "FlowDesk", category: "FEATURED · AI SAAS / CRM", description: "Multi-tenant CRM for real business workflows — leads, Kanban pipeline, conversations, scheduling, automation, analytics and subscription-ready architecture.", tags: ["Next.js", "TypeScript", "Supabase", "Stripe", "RLS", "AI Automation"], image: "/projects/flowdesk-dashboard.jpg", previewUrl: "https://whats-app-crm-system-architecture.vercel.app", href: "/projects/flowdesk", liveUrl: "https://whats-app-crm-system-architecture.vercel.app", codeUrl: "https://github.com/brenfreitas29/FlowDesk" },
@@ -19,6 +20,7 @@ const capabilities = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#181232] text-white">
+      <SideAtmosphere />
       <StudioHero />
 
       <section id="work" className="relative overflow-hidden border-t border-white/[.08] bg-gradient-to-b from-[#21184f] via-[#21194b] to-[#181232] px-6 py-28 md:px-10 md:py-40">
