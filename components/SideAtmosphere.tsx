@@ -34,8 +34,8 @@ export default function SideAtmosphere() {
   const auroraTwoX = useSpring(useTransform(scrollYProgress, [0, .5, 1], [100, -140, 60]), { stiffness: 34, damping: 24 });
   const backgroundRotate = useTransform(scrollYProgress, [0, 1], [-7, 8]);
   const pointerX = useMotionValue(50); const pointerY = useMotionValue(35);
-  const smoothPointerX = useSpring(pointerX, { stiffness: 45, damping: 28, mass: .6 });
-  const smoothPointerY = useSpring(pointerY, { stiffness: 45, damping: 28, mass: .6 });
+  const smoothPointerX = useSpring(pointerX, { stiffness: 210, damping: 30, mass: .22 });
+  const smoothPointerY = useSpring(pointerY, { stiffness: 210, damping: 30, mass: .22 });
 
   useEffect(() => {
     if (reduceMotion) return;
