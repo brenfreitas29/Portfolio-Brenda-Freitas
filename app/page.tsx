@@ -6,8 +6,7 @@ import SideAtmosphere from "@/components/SideAtmosphere";
 
 const projects = [
   { number: "01", title: "FlowDesk", category: "FEATURED · AI SAAS / CRM", description: "Multi-tenant CRM for real business workflows — leads, Kanban pipeline, conversations, scheduling, automation, analytics and subscription-ready architecture.", tags: ["Next.js", "TypeScript", "Supabase", "Stripe", "RLS", "AI Automation"], image: "/projects/flowdesk-dashboard.jpg", previewUrl: "https://whats-app-crm-system-architecture.vercel.app", href: "/projects/flowdesk", liveUrl: "https://whats-app-crm-system-architecture.vercel.app", codeUrl: "https://github.com/brenfreitas29/FlowDesk" },
-  { number: "02", title: "VivaTrip", category: "FEATURED · TRAVEL PRODUCT", description: "Full-stack travel product combining flight discovery, cash-versus-miles comparison, protected user flows and affiliate-ready booking experiences.", tags: ["Next.js", "React", "TypeScript", "Supabase", "SSR Auth", "Travel Tech"], image: "/projects/vivatrip-portfolio.jpg", previewUrl: "https://vivatrip.vercel.app", href: "/projects/vivatrip", liveUrl: "https://vivatrip.vercel.app", codeUrl: "https://github.com/brenfreitas29/VivaTrip" },
-  { number: "03", title: "Hair & Skin Clinic", category: "BUSINESS WEBSITE / UX", description: "Responsive multilingual clinic experience built around credibility, clear service discovery and conversion-focused user journeys.", tags: ["Next.js", "React", "TypeScript", "Responsive UI", "Multilingual"], image: "/projects/hair-skin-clinic.png", href: "/projects/hair-skin-clinic", liveUrl: "https://graftclinic.vercel.app", codeUrl: "https://github.com/brenfreitas29/graftclinic" },
+  { number: "02", title: "Hair & Skin Clinic", category: "BUSINESS WEBSITE / UX", description: "Responsive multilingual clinic experience built around credibility, clear service discovery and conversion-focused user journeys.", tags: ["Next.js", "React", "TypeScript", "Responsive UI", "Multilingual"], image: "/projects/hair-skin-clinic.png", href: "/projects/hair-skin-clinic", liveUrl: "https://graftclinic.vercel.app", codeUrl: "https://github.com/brenfreitas29/graftclinic" },
 ];
 
 const capabilities = [
@@ -29,7 +28,7 @@ export default function Home(){
           <p className="text-[10px] uppercase tracking-[.34em] text-[#cfc3f5]/45 sm:text-xs">Selected work · 2026</p>
           <div>
             <h2 className="max-w-5xl text-[clamp(3.1rem,7vw,5.5rem)] font-medium leading-[.95] tracking-[-.055em]">Products with design on the surface.<span className="block font-normal italic text-[#efb7df]">Engineering underneath.</span></h2>
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-[#cfc3f5]/58 sm:text-base">Live products across SaaS, travel tech and business platforms — built with real authentication, databases, integrations and deployment.</p>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-[#cfc3f5]/58 sm:text-base">Live products across SaaS and business platforms — built with real authentication, databases, integrations and deployment.</p>
           </div>
         </div>
         <div className="flex flex-col gap-7 md:gap-9">{projects.map(project=><ProjectCard key={project.number} project={project}/>)}</div>
