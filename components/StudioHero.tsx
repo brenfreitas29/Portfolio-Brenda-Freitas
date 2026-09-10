@@ -42,7 +42,7 @@ export default function StudioHero() {
                 <div className="grid items-stretch gap-8 p-6 sm:p-8 md:grid-cols-[1.08fr_.92fr] md:p-10">
                   <div className="flex flex-col justify-center"><p className="text-[10px] uppercase tracking-[.28em] text-[#efb7df]/72">Product engineering</p><h1 className="mt-5 text-[clamp(4rem,8vw,8rem)] font-medium leading-[.78] tracking-[-.085em]">I build<br/><span className="font-normal italic text-[#efb7df]">useful</span><br/>products.</h1><p className="mt-7 max-w-md text-sm leading-7 text-[#cfc3f5]/52">SaaS, full-stack apps and AI-enabled workflows — designed, engineered and shipped as real products.</p></div>
                   <div className="relative min-h-[430px] overflow-hidden rounded-[1.35rem] border border-white/[.10] bg-[#1d1640]">
-                    <img src="/brenda-profile.svg" alt="Brenda Freitas" className="absolute inset-0 h-full w-full object-cover object-center" />
+                    <img src="/brenda-profile.jpg" alt="Brenda Freitas" className="absolute inset-0 h-full w-full object-cover object-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#100b24]/90 via-transparent to-transparent"/>
                     <div className="absolute inset-x-0 bottom-0 p-5"><p className="text-[9px] uppercase tracking-[.22em] text-[#cfc3f5]/55">Brenda Freitas</p><p className="mt-2 text-lg font-medium">Full Stack · AI Product</p></div>
                   </div>
