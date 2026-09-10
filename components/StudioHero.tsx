@@ -39,12 +39,12 @@ export default function StudioHero() {
               <div className="absolute h-[72%] w-[84%] rounded-[46%] bg-[radial-gradient(circle_at_50%_44%,rgba(239,183,223,.15),rgba(116,87,255,.075)_45%,transparent_72%)] blur-[6px]"/>
               <motion.div animate={{ y:[0,-14,0], rotate:[-1.2,.8,-1.2] }} transition={{duration:8,repeat:Infinity,ease:"easeInOut"}} className="relative z-20 w-full max-w-[790px] overflow-hidden rounded-[1.8rem] border border-white/[.11] bg-[#0b0719]/94 shadow-[0_45px_150px_rgba(2,0,12,.72)] backdrop-blur-xl">
                 <div className="flex h-11 items-center gap-2 border-b border-white/[.08] px-5"><span className="h-2.5 w-2.5 rounded-full bg-[#efb7df]/80"/><span className="h-2.5 w-2.5 rounded-full bg-[#d9c58b]/70"/><span className="h-2.5 w-2.5 rounded-full bg-[#94cda0]/70"/><span className="ml-3 text-[8px] uppercase tracking-[.22em] text-[#cfc3f5]/25">brenda-studio / selected work</span></div>
-                <div className="grid items-stretch gap-8 p-6 sm:p-8 md:grid-cols-[1.08fr_.92fr] md:p-10">
-                  <div className="flex flex-col justify-center"><p className="text-[10px] uppercase tracking-[.28em] text-[#efb7df]/72">Product engineering</p><h1 className="mt-5 text-[clamp(4rem,8vw,8rem)] font-medium leading-[.78] tracking-[-.085em]">I build<br/><span className="font-normal italic text-[#efb7df]">useful</span><br/>products.</h1><p className="mt-7 max-w-md text-sm leading-7 text-[#cfc3f5]/52">SaaS, full-stack apps and AI-enabled workflows — designed, engineered and shipped as real products.</p></div>
-                  <div className="relative min-h-[430px] overflow-hidden rounded-[1.35rem] border border-white/[.10] bg-[#1d1640]">
-                    <img src="/brenda-profile.jpg" alt="Brenda Freitas" className="absolute inset-0 h-full w-full object-cover object-center" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#100b24]/90 via-transparent to-transparent"/>
-                    <div className="absolute inset-x-0 bottom-0 p-5"><p className="text-[9px] uppercase tracking-[.22em] text-[#cfc3f5]/55">Brenda Freitas</p><p className="mt-2 text-lg font-medium">Full Stack · AI Product</p></div>
+                <div className="p-7 sm:p-10 md:p-12">
+                  <p className="text-[10px] uppercase tracking-[.28em] text-[#efb7df]/72">Product engineering</p>
+                  <h1 className="mt-6 text-[clamp(4.5rem,9vw,9rem)] font-medium leading-[.78] tracking-[-.085em]">I build<br/><span className="font-normal italic text-[#efb7df]">useful</span><br/>products.</h1>
+                  <div className="mt-9 grid gap-6 border-t border-white/[.08] pt-7 md:grid-cols-[1.15fr_.85fr]">
+                    <p className="max-w-md text-sm leading-7 text-[#cfc3f5]/52">SaaS, full-stack apps and AI-enabled workflows — designed, engineered and shipped as real products.</p>
+                    <div className="flex flex-wrap content-start gap-2"><span className="rounded-full border border-white/[.09] bg-[#1d1640]/60 px-3 py-2 text-[9px] uppercase tracking-[.14em] text-[#cfc3f5]/58">Next.js</span><span className="rounded-full border border-white/[.09] bg-[#1d1640]/60 px-3 py-2 text-[9px] uppercase tracking-[.14em] text-[#cfc3f5]/58">TypeScript</span><span className="rounded-full border border-white/[.09] bg-[#1d1640]/60 px-3 py-2 text-[9px] uppercase tracking-[.14em] text-[#cfc3f5]/58">Supabase</span><span className="rounded-full border border-white/[.09] bg-[#1d1640]/60 px-3 py-2 text-[9px] uppercase tracking-[.14em] text-[#cfc3f5]/58">AI</span></div>
                   </div>
                 </div>
               </motion.div>
