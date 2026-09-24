@@ -199,3 +199,17 @@ section[id] { scroll-margin-top: 1.5rem; }
 @media(max-width:900px) { .editorial-project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .editorial-intro { gap:2rem; } }
 @media(max-width:760px) { .editorial-container { width:min(100% - 2rem,1440px); } .editorial-header { padding:1rem 0; } .editorial-brand { font-size:1.35rem; } .editorial-nav > a { display:none; } .editorial-intro { display:block; padding:5rem 0 4rem; } .editorial-intro h1 { font-size:clamp(3.3rem,12vw,5.6rem); } .editorial-aside { display:none; } .editorial-section-heading { display:block; } .editorial-section-heading h2 { margin:1rem 0; } .editorial-project-grid { grid-template-columns:1fr; gap:2.5rem; } .editorial-project-overlay { position:static; opacity:1; padding:.8rem; background:#241c1c; } .editorial-project-overlay > span { display:none; } .editorial-project-image { aspect-ratio:auto; } .editorial-project-image img { position:relative!important; width:100%; height:auto; aspect-ratio:1.5; } .editorial-skills,.editorial-about { grid-template-columns:1fr; gap:2rem; padding-block:4rem; } .editorial-contact { padding:4rem 0; } }
 @media(prefers-reduced-motion:reduce) { .editorial-project-overlay,.editorial-project-image img { transition:none; } }
+
+/* Low-contrast ambient motion stays behind the content and uses compositor transforms. */
+.editorial-hero { position:relative; overflow:hidden; }
+.editorial-hero > .editorial-container { position:relative; z-index:1; }
+.editorial-ambient { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+.editorial-ambient-grid { position:absolute; inset:-12%; background-image:linear-gradient(#681b2809 1px,transparent 1px),linear-gradient(90deg,#681b2809 1px,transparent 1px); background-size:72px 72px; mask-image:linear-gradient(90deg,transparent 5%,#000 45%,transparent 100%); animation:editorial-grid-drift 28s ease-in-out infinite alternate; }
+.editorial-ambient-glow { position:absolute; width:min(58vw,750px); aspect-ratio:1; border-radius:50%; filter:blur(75px); opacity:.45; will-change:transform; }
+.editorial-ambient-glow-one { right:-15%; top:-32%; background:radial-gradient(circle,#dcb8aa 0%,#ead7cf 35%,transparent 70%); animation:editorial-drift-one 22s ease-in-out infinite alternate; }
+.editorial-ambient-glow-two { left:-22%; bottom:-65%; background:radial-gradient(circle,#ded0c4 0%,#ebddd3 38%,transparent 70%); animation:editorial-drift-two 26s ease-in-out infinite alternate; }
+@keyframes editorial-grid-drift { to { transform:translate3d(36px,-24px,0); } }
+@keyframes editorial-drift-one { to { transform:translate3d(-12%,18%,0) scale(1.12); } }
+@keyframes editorial-drift-two { to { transform:translate3d(16%,-14%,0) scale(.9); } }
+@media(max-width:760px) { .editorial-ambient-glow { width:95vw; filter:blur(55px); opacity:.35; } .editorial-ambient-glow-one { right:-50%; top:-10%; } .editorial-ambient-glow-two { bottom:-35%; } }
+@media(prefers-reduced-motion:reduce) { .editorial-ambient-grid,.editorial-ambient-glow { animation:none; will-change:auto; } }
