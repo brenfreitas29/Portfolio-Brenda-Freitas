@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 const navigation = [
   { label: "Projects", href: "#work" },
@@ -35,38 +36,33 @@ export default function StudioHero() {
     return () => { document.body.style.overflow = previous; window.removeEventListener("keydown", onKeyDown); };
   }, [open]);
 
-  return (
-    <section className="editorial-hero" id="top">
-      <div className="editorial-ambient" aria-hidden="true">
-        <div className="editorial-ambient-grid" />
-        <div className="editorial-ambient-glow editorial-ambient-glow-one" />
-        <div className="editorial-ambient-glow editorial-ambient-glow-two" />
-      </div>
-      <div className="editorial-container">
-        <header className="editorial-header">
-          <Link href="/" className="editorial-brand">Brenda Freitas<span>.</span></Link>
-          <nav aria-label="Main navigation" className="editorial-nav">
-            {navigation.slice(0, 3).map(item => <a href={item.href} key={item.href}>{item.label}</a>)}
-            <button ref={button} type="button" className="editorial-menu-button" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open} aria-controls="portfolio-menu">Menu <span aria-hidden="true">☰</span></button>
-          </nav>
-        </header>
-        <div className="editorial-intro">
-          <div>
-            <p className="editorial-eyebrow">Junior Full Stack Developer · Buenos Aires</p>
-            <h1>Building thoughtful <em>digital products.</em></h1>
-            <p className="editorial-summary">I build web applications with React, Next.js and connected data. My background in customer support helps me focus on the people who use them.</p>
-            <div className="editorial-actions"><a href="#work" className="editorial-primary">View projects <span aria-hidden="true">↗</span></a><a href="mailto:brenda.micaela80@gmail.com" className="editorial-secondary">Get in touch</a></div>
-          </div>
-          <aside className="editorial-aside"><span>01 / 03</span><p>Code, design and practical solutions for real workflows.</p><span>PORTUGUÊS · ESPAÑOL</span></aside>
+  return <section className="br-hero" id="top">
+    <div className="br-ambient" aria-hidden="true"><div className="br-ambient-grid"/><div className="br-ambient-glow"/></div>
+    <div className="br-container br-hero-content">
+      <header className="br-header">
+        <Link href="/" className="br-brand">BF<span>®</span></Link>
+        <nav aria-label="Main navigation" className="br-nav">
+          {navigation.map(item => <a href={item.href} key={item.href}>{item.label}</a>)}
+        </nav>
+        <button ref={button} className="br-menu-button" type="button" onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={open} aria-controls="portfolio-menu">MENU <span aria-hidden="true">☰</span></button>
+      </header>
+      <div className="br-hero-main">
+        <div className="br-hero-kicker"><span>PORTFOLIO / 2026</span><span>BASED IN BUENOS AIRES · AVAILABLE REMOTELY</span></div>
+        <h1>HI, I&apos;M <span>BRENDA</span></h1>
+        <div className="br-hero-lower">
+          <p>A junior full stack developer building useful products with thoughtful interfaces, connected data and real user needs in mind.</p>
+          <div className="br-portrait"><Image src="/brenda-profile.jpg" alt="Brenda Freitas" fill sizes="220px" priority className="object-cover"/></div>
+          <a className="br-pill br-pill-color" href="mailto:brenda.micaela80@gmail.com">LET&apos;S TALK <span aria-hidden="true">↗</span></a>
         </div>
+        <div className="br-hero-bottom"><span>REACT / NEXT.JS / TYPESCRIPT / SUPABASE</span><a href="#work">SCROLL TO EXPLORE ↓</a></div>
       </div>
-      {open && <div className="editorial-menu-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) setOpen(false); }}>
-        <div ref={panel} id="portfolio-menu" role="dialog" aria-modal="true" aria-label="Portfolio navigation" className="editorial-menu-panel">
-          <div className="editorial-menu-top"><span>Brenda Freitas / Navigate</span><button ref={close} onClick={() => {setOpen(false);button.current?.focus();}} type="button" aria-label="Close menu">Close ×</button></div>
-          <nav aria-label="Overlay navigation" className="editorial-menu-links">{navigation.map((item,index) => <a href={item.href} key={item.href} onClick={() => setOpen(false)}><span>0{index+1}</span>{item.label}<span aria-hidden="true">↗</span></a>)}<Link href="/resume" onClick={() => setOpen(false)}><span>05</span>Résumé<span aria-hidden="true">↗</span></Link></nav>
-          <p>Available for junior developer roles and freelance projects.</p>
-        </div>
-      </div>}
-    </section>
-  );
+    </div>
+    {open && <div className="br-menu-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) setOpen(false); }}>
+      <div ref={panel} id="portfolio-menu" role="dialog" aria-modal="true" aria-label="Portfolio navigation" className="br-menu-panel">
+        <div className="br-menu-top"><span>BF® / NAVIGATION</span><button ref={close} onClick={() => {setOpen(false);button.current?.focus();}} type="button" aria-label="Close menu">CLOSE ×</button></div>
+        <nav aria-label="Overlay navigation" className="br-menu-links">{navigation.map((item,index) => <a href={item.href} key={item.href} onClick={() => setOpen(false)}><span>0{index+1}</span>{item.label}<span aria-hidden="true">↗</span></a>)}<Link href="/resume" onClick={() => setOpen(false)}><span>05</span>Résumé<span aria-hidden="true">↗</span></Link></nav>
+        <p>OPEN FOR JUNIOR ROLES & SELECT FREELANCE PROJECTS</p>
+      </div>
+    </div>}
+  </section>;
 }
