@@ -416,10 +416,10 @@ section[id] { scroll-margin-top: 1.5rem; }
 .odyssey-ufo-lights { position:absolute; inset:48% 4% 15%; border-radius:50%; box-shadow:0 0 22px 5px #ffedb26e; opacity:.15; }
 .odyssey-scene-3.is-active .odyssey-ufo-lights { animation:odyssey-blink 1.8s ease-in-out infinite; }
 .odyssey-beam { z-index:1; left:68%; top:47%; width:16%; height:30%; clip-path:polygon(20% 0,38% 0,100% 100%,0 100%); background:linear-gradient(180deg,#fff8c09c 0%,#f8fae574 55%,#fff8d60a 100%); filter:blur(6px); opacity:0; transform-origin:30% 0; }
-.odyssey-scene-3.is-active .odyssey-beam { animation:odyssey-abduction-beam 6.5s ease-in-out both; }
+.odyssey-scene-3.is-active .odyssey-beam { animation:odyssey-abduction-beam 7.2s ease-in-out infinite; }
 @keyframes odyssey-abduction-beam { 0%,15%,95%,100% {opacity:0;} 27%,70% {opacity:.65;} 85% {opacity:.12;} }
 .odyssey-person { z-index:2; left:78.8%; top:68%; width:3.6vw; aspect-ratio:2/3; }
-.odyssey-scene-3.is-active .odyssey-person { animation:odyssey-abduct 6.5s ease-in-out both; }
+.odyssey-scene-3.is-active .odyssey-person { animation:odyssey-abduct 7.2s ease-in-out infinite; }
 @keyframes odyssey-abduct { 0%,29% {transform:translate3d(0,0,0);opacity:1;} 75% {transform:translate3d(-2vw,-16vh,0) scale(.78);opacity:1;} 88%,100% {transform:translate3d(-2.4vw,-19vh,0) scale(.65);opacity:0;} }
 .odyssey-planet { z-index:1; left:45%; top:-14%; width:67vw; aspect-ratio:1288/1221; mask-image:linear-gradient(#000 0 73%,transparent 88%); }
 .odyssey-scene-4.is-active .odyssey-planet { animation:odyssey-moonrise 7s ease-out both; }
