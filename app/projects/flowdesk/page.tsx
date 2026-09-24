@@ -19,7 +19,7 @@ const stack = ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "RLS", "Stripe
 
 export default function FlowDeskProjectPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#100b24] text-white">
+    <main className="br-case min-h-screen overflow-hidden bg-[#0b0b0e] text-white">
       <section className="relative border-b border-white/[.08] bg-[radial-gradient(circle_at_76%_22%,rgba(124,91,255,.18),transparent_32%),linear-gradient(135deg,#17102f_0%,#23174f_55%,#140d2d_100%)]">
         <div className="pointer-events-none absolute -left-40 top-32 h-96 w-96 rounded-full bg-[#efb7df]/[.06] blur-[120px]" />
         <div className="mx-auto max-w-[1450px] px-5 pb-16 pt-7 sm:px-6 md:px-10 md:pb-20">
