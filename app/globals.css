@@ -468,3 +468,31 @@ section[id] { scroll-margin-top: 1.5rem; }
 }
 @media(max-width:420px) { .odyssey-content h1 { font-size:clamp(3rem,13vw,4rem); } .odyssey-intro p { max-width:260px; } .odyssey-about-bio { flex-direction:column; } }
 @media(prefers-reduced-motion:reduce) { .odyssey-scene,.odyssey-scene-image,.odyssey-content { animation:none!important; transition:none!important; } }
+
+/* Scroll depth: full-screen scenery stays behind the incoming content panels. */
+.odyssey-hero { position:sticky; top:0; z-index:0; --scroll-depth:0; }
+.odyssey-scenes { transform:translate3d(0,calc(var(--scroll-depth) * -45px),0) scale(calc(1 + var(--scroll-depth) * .1)); transform-origin:center center; will-change:transform; }
+.odyssey-content { translate:0 calc(var(--scroll-depth) * -65px); opacity:calc(1 - var(--scroll-depth) * .72); }
+.odyssey-header,.odyssey-footer { opacity:calc(1 - var(--scroll-depth) * .8); }
+.br-about { position:sticky; top:0; z-index:1; min-height:100svh; box-shadow:0 -28px 90px #07110fcc; border-radius:22px 22px 0 0; }
+.br-services { position:sticky; top:0; z-index:2; min-height:100svh; margin-top:-7vh; box-shadow:0 -30px 90px #0b16168c; border-radius:22px 22px 0 0; }
+.br-work { z-index:3; margin-top:-7vh; }
+.br-work::before { box-shadow:0 -30px 90px #07110fc9; border-radius:22px 22px 0 0; }
+.br-contact { z-index:4; margin-top:-7vh; box-shadow:0 -30px 90px #07110f99; border-radius:22px 22px 0 0; }
+.br-project { box-shadow:0 -22px 60px #07110fba,0 24px 75px #07110f9c; }
+@supports (animation-timeline:view()) {
+ .br-preview-row,.br-services .br-container,.br-work > .br-section-top,.br-work > h2 { animation:depth-reveal linear both; animation-timeline:view(); animation-range:entry 0% entry 65%; }
+ @keyframes depth-reveal { from { opacity:.65; translate:0 55px; scale:.96; } to { opacity:1; translate:0 0; scale:1; } }
+}
+@media(max-width:900px) {
+ .br-about,.br-services { position:relative; top:auto; min-height:0; }
+ .br-about { margin-top:0; }
+ .br-services,.br-work,.br-contact { margin-top:-4vh; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .odyssey-scenes { transform:none; will-change:auto; }
+ .odyssey-content { translate:none; opacity:1; }
+ .odyssey-header,.odyssey-footer { opacity:1; }
+ .br-about,.br-services { position:relative; top:auto; min-height:0; }
+ .br-preview-row,.br-services .br-container,.br-work > .br-section-top,.br-work > h2 { animation:none; }
+}

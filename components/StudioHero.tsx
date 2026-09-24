@@ -55,6 +55,19 @@ export default function StudioHero() {
     return () => query.removeEventListener("change", sync);
   }, []);
   useEffect(() => {
+    if (!motionOkay) return;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const element = hero.current;
+      if (element) element.style.setProperty("--scroll-depth", String(Math.min(1, Math.max(0, window.scrollY / element.clientHeight))));
+    };
+    const onScroll = () => { if (!frame) frame = window.requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => { window.removeEventListener("scroll", onScroll); if (frame) window.cancelAnimationFrame(frame); };
+  }, [motionOkay]);
+  useEffect(() => {
     if (!motionOkay || paused || open) return;
     const timer = window.setTimeout(() => setActive(value => (value + 1) % scenes.length), 7000);
     return () => window.clearTimeout(timer);
@@ -89,7 +102,7 @@ export default function StudioHero() {
   }, [open]);
 
   return <section ref={hero} className={`odyssey-hero odyssey-${scenes[active].theme}`} id="top" aria-label="Apresentação do portfólio" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }}>
-    <div className="odyssey-scenes" aria-hidden="true">{scenes.map((scene,index) => <div key={scene.number} className={`odyssey-scene ${index === active ? "is-active" : ""}`}><Image src={scene.image} alt="" fill priority={index===0} sizes="100vw" className="odyssey-scene-image"/></div>)}</div>
+    <div className="odyssey-scenes" aria-hidden="true">{scenes.map((scene,index) => <div key={scene.number} className={`odyssey-scene ${index === active ? "is-active" : ""}`}><Image src={scene.image} alt="" fill priority={index===0} quality={90} sizes="100vw" className="odyssey-scene-image"/></div>)}</div>
     <div className="odyssey-scrim" aria-hidden="true" />
     <header className="odyssey-header">
       <a href="#top" className="odyssey-logo" aria-label="Brenda Freitas, início"><span>B<br/>F</span><small>®</small></a>
