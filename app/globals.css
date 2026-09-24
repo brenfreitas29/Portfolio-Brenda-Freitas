@@ -396,6 +396,34 @@ section[id] { scroll-margin-top: 1.5rem; }
 .odyssey-scene { opacity:0; transition:opacity 1.15s ease; }
 .odyssey-scene.is-active { opacity:1; z-index:1; }
 .odyssey-scene-image { object-fit:cover; object-position:center center; }
+/* The subjects are independent transparent layers; scene backgrounds contain no duplicate object. */
+.odyssey-subject,.odyssey-person,.odyssey-beam { position:absolute; pointer-events:none; }
+.odyssey-subject img,.odyssey-person img { object-fit:contain; }
+.odyssey-astronaut { z-index:2; left:51%; top:23%; width:37vw; aspect-ratio:1672/941; transform-origin:center; }
+.odyssey-scene-1.is-active .odyssey-astronaut { animation:odyssey-float 6.8s ease-in-out infinite; }
+@keyframes odyssey-float { 0%,100% { transform:translate3d(0,1.4vw,0) rotate(-3deg); } 50% { transform:translate3d(2vw,-2.2vw,0) rotate(3deg); } }
+.odyssey-car { z-index:2; left:51%; top:16%; width:40vw; aspect-ratio:1672/941; }
+.odyssey-scene-2.is-active .odyssey-car { animation:odyssey-drive 6.7s ease-in-out infinite alternate; }
+@keyframes odyssey-drive { from { transform:translate3d(2vw,.75vw,0) rotate(.8deg); } to { transform:translate3d(-2.5vw,-.8vw,0) rotate(-.9deg); } }
+.odyssey-headlight { position:absolute; width:3vw; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,#fff 0%,#ffe8a8 16%,#ffd18c80 38%,transparent 72%); mix-blend-mode:screen; opacity:.15; filter:blur(3px); }
+.odyssey-headlight-left { left:5.1%; top:47%; }.odyssey-headlight-right { left:35.2%; top:46%; }
+.odyssey-scene-2.is-active .odyssey-headlight { animation:odyssey-blink 2.8s ease-in-out infinite; }
+.odyssey-scene-2.is-active .odyssey-headlight-right { animation-delay:.12s; }
+@keyframes odyssey-blink { 0%,27%,45%,100% { opacity:.15; transform:scale(.7); } 31%,38% { opacity:1; transform:scale(1.6); filter:blur(7px) drop-shadow(0 0 16px #fff4bc); } }
+.odyssey-ufo { z-index:3; left:52%; top:31%; width:40vw; aspect-ratio:2/1; }
+.odyssey-scene-3.is-active .odyssey-ufo { animation:odyssey-hover 5.5s ease-in-out infinite alternate; }
+@keyframes odyssey-hover { from { transform:translate3d(-.6vw,.8vw,0) rotate(-.5deg); } to { transform:translate3d(.8vw,-.7vw,0) rotate(.5deg); } }
+.odyssey-ufo-lights { position:absolute; inset:48% 4% 15%; border-radius:50%; box-shadow:0 0 22px 5px #ffedb26e; opacity:.15; }
+.odyssey-scene-3.is-active .odyssey-ufo-lights { animation:odyssey-blink 1.8s ease-in-out infinite; }
+.odyssey-beam { z-index:1; left:68%; top:47%; width:16%; height:30%; clip-path:polygon(20% 0,38% 0,100% 100%,0 100%); background:linear-gradient(180deg,#fff8c09c 0%,#f8fae574 55%,#fff8d60a 100%); filter:blur(6px); opacity:0; transform-origin:30% 0; }
+.odyssey-scene-3.is-active .odyssey-beam { animation:odyssey-abduction-beam 6.5s ease-in-out both; }
+@keyframes odyssey-abduction-beam { 0%,15%,95%,100% {opacity:0;} 27%,70% {opacity:.65;} 85% {opacity:.12;} }
+.odyssey-person { z-index:2; left:78.8%; top:68%; width:3.6vw; aspect-ratio:2/3; }
+.odyssey-scene-3.is-active .odyssey-person { animation:odyssey-abduct 6.5s ease-in-out both; }
+@keyframes odyssey-abduct { 0%,29% {transform:translate3d(0,0,0);opacity:1;} 75% {transform:translate3d(-2vw,-16vh,0) scale(.78);opacity:1;} 88%,100% {transform:translate3d(-2.4vw,-19vh,0) scale(.65);opacity:0;} }
+.odyssey-planet { z-index:1; left:45%; top:-14%; width:67vw; aspect-ratio:1288/1221; mask-image:linear-gradient(#000 0 73%,transparent 88%); }
+.odyssey-scene-4.is-active .odyssey-planet { animation:odyssey-moonrise 7s ease-out both; }
+@keyframes odyssey-moonrise { from {transform:translate3d(0,11vh,0);} to {transform:translate3d(0,-2vh,0);} }
 /* Each cloud is a transparent image with its own motion, independent of the scene's subject. */
 .odyssey-cloud { position:absolute; pointer-events:none; width:120vw; height:40vw; max-height:66vh; min-height:270px; bottom:-20vw; left:-10vw; will-change:transform; }
 .odyssey-cloud-image { object-fit:fill; }
@@ -471,13 +499,20 @@ section[id] { scroll-margin-top: 1.5rem; }
  .odyssey-footer > a { display:none; }
  .odyssey-pager { grid-column:2; }
  .odyssey-scene-image { object-position:62% center; }
+ .odyssey-astronaut { left:47%; top:30%; width:67vw; }
+ .odyssey-car { left:40%; top:28%; width:75vw; }
+ .odyssey-headlight { width:7vw; }
+ .odyssey-ufo { left:42%; top:34%; width:80vw; }
+ .odyssey-beam { left:65%; top:43%; width:24%; height:36%; }
+ .odyssey-person { left:78%; top:72%; width:8vw; }
+ .odyssey-planet { left:30%; top:10%; width:130vw; }
  .odyssey-cloud-front { width:190vw; height:63vw; min-height:240px; bottom:-31vw; left:-45vw; }
  .odyssey-cloud-back { width:145vw; height:48vw; min-height:165px; bottom:15vw; left:10vw; }
  .odyssey-about-bio { align-items:start; }
  .odyssey-about-portrait { width:76px; }
 }
 @media(max-width:420px) { .odyssey-content h1 { font-size:clamp(3rem,13vw,4rem); } .odyssey-intro p { max-width:260px; } .odyssey-about-bio { flex-direction:column; } }
-@media(prefers-reduced-motion:reduce) { .odyssey-scene,.odyssey-scene-image,.odyssey-cloud,.odyssey-content { animation:none!important; transition:none!important; will-change:auto; } }
+@media(prefers-reduced-motion:reduce) { .odyssey-scene,.odyssey-scene-image,.odyssey-cloud,.odyssey-subject,.odyssey-person,.odyssey-beam,.odyssey-ufo-lights,.odyssey-headlight,.odyssey-content { animation:none!important; transition:none!important; will-change:auto; } .odyssey-beam {opacity:.2;} }
 
 /* Scroll depth: full-screen scenery stays behind the incoming content panels. */
 .odyssey-hero { position:sticky; top:0; z-index:0; --scroll-depth:0; }
