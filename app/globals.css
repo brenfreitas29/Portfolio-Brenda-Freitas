@@ -111,3 +111,15 @@ a {
     scroll-behavior: auto !important;
   }
 }
+/* Keyboard access and legible focus across the portfolio. */
+:focus-visible {
+  outline: 3px solid #efb7df;
+  outline-offset: 4px;
+}
+
+section[id] { scroll-margin-top: 1.5rem; }
+
+@media (pointer: fine) {
+  html, body, body *, a, button, input, textarea, select,
+  [role="button"], [data-cursor="interactive"] { cursor: auto !important; }
+}
