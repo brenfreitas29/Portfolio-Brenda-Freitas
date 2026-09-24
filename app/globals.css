@@ -341,3 +341,20 @@ section[id] { scroll-margin-top: 1.5rem; }
   .br-project-image img { position:relative!important; display:block; width:100%; height:auto; aspect-ratio:1.5; object-fit:cover; }
 }
 @media(prefers-reduced-motion:reduce) { .br-project-overlay { transition:none; } }
+
+/* Video-reference scroll layering: each new panel covers the previous one. */
+.br-about { position:relative; z-index:1; margin-top:-2rem; padding-top:8rem; background:#0b0b0e; border-radius:2rem 2rem 0 0; }
+.br-services { position:relative; z-index:2; margin-top:-2.5rem; }
+.br-work { position:relative; isolation:isolate; z-index:3; margin-top:-2.5rem; }
+.br-work::before { content:""; position:absolute; inset:0 auto 0 50%; z-index:-1; width:100vw; transform:translateX(-50%); background:#0b0b0e; border-radius:2rem 2rem 0 0; }
+.br-contact { position:relative; z-index:4; margin-top:-2.5rem; }
+.br-project-list { display:block; position:relative; padding-bottom:5rem; }
+.br-project { position:sticky; top:clamp(1rem,5vh,3.5rem); min-height:min(68svh,690px); margin-bottom:clamp(12rem,35vh,22rem); box-shadow:0 -24px 45px #05050870,0 24px 45px #05050870; }
+.br-project:nth-child(1) { z-index:1; }
+.br-project:nth-child(2) { z-index:2; }
+.br-project:nth-child(3) { z-index:3; margin-bottom:0; }
+@media(max-width:700px), (prefers-reduced-motion:reduce) {
+  .br-project-list { display:grid; gap:1.5rem; padding-bottom:0; }
+  .br-project,.br-project:nth-child(1),.br-project:nth-child(2),.br-project:nth-child(3) { position:relative; top:auto; min-height:0; margin-bottom:0; }
+}
+@media(max-width:700px) { .br-about { padding-top:5rem; } }
