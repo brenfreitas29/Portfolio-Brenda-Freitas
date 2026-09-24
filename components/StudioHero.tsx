@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 const navigation = [
   { label: "Projects", href: "#work" },
@@ -57,12 +58,12 @@ export default function StudioHero() {
         <div className="br-hero-bottom"><span>REACT / NEXT.JS / TYPESCRIPT / SUPABASE</span><a href="#work">SCROLL TO EXPLORE ↓</a></div>
       </div>
     </div>
-    {open && <div className="br-menu-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) setOpen(false); }}>
+    {open && createPortal(<div className="br-menu-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) { setOpen(false); button.current?.focus(); } }}>
       <div ref={panel} id="portfolio-menu" role="dialog" aria-modal="true" aria-label="Portfolio navigation" className="br-menu-panel">
         <div className="br-menu-top"><span>BF® / NAVIGATION</span><button ref={close} onClick={() => {setOpen(false);button.current?.focus();}} type="button" aria-label="Close menu">CLOSE ×</button></div>
         <nav aria-label="Overlay navigation" className="br-menu-links">{navigation.map((item,index) => <a href={item.href} key={item.href} onClick={() => setOpen(false)}><span>0{index+1}</span>{item.label}<span aria-hidden="true">↗</span></a>)}<Link href="/resume" onClick={() => setOpen(false)}><span>05</span>Résumé<span aria-hidden="true">↗</span></Link></nav>
         <p>OPEN FOR JUNIOR ROLES & SELECT FREELANCE PROJECTS</p>
       </div>
-    </div>}
+    </div>, document.body)}
   </section>;
 }
