@@ -19,7 +19,7 @@ const stack = ["Next.js", "React", "TypeScript", "Tailwind CSS", "Responsive UI"
 
 export default function HairSkinClinicProjectPage() {
   return (
-    <main className="min-h-screen bg-[#100b24] text-white">
+    <main className="br-case min-h-screen bg-[#0b0b0e] text-white">
       <section className="relative overflow-hidden border-b border-white/[.07] bg-[radial-gradient(circle_at_78%_14%,rgba(207,195,245,.09),transparent_34%),radial-gradient(circle_at_14%_70%,rgba(239,183,223,.07),transparent_34%),linear-gradient(180deg,#17102f_0%,#130d2a_58%,#100b24_100%)]">
         <div className="pointer-events-none absolute inset-0 opacity-[.025]" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.25) 1px,transparent 1px)",backgroundSize:"72px 72px"}} />
         <div className="relative mx-auto max-w-[1450px] px-5 pb-20 pt-8 sm:px-6 md:px-10 md:pb-24">
