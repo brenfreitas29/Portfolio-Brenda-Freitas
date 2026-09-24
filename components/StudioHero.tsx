@@ -52,7 +52,7 @@ export default function StudioHero() {
         <h1>HI, I&apos;M <span>BRENDA</span></h1>
         <div className="br-hero-lower">
           <p>A junior full stack developer building useful products with thoughtful interfaces, connected data and real user needs in mind.</p>
-          <div className="br-portrait"><Image src="/brenda-profile.jpg" alt="Brenda Freitas" fill sizes="220px" priority className="object-cover"/></div>
+          <div className="br-portrait"><Image src="/brenda-3d-avatar.webp" alt="3D character portrait of Brenda Freitas" fill sizes="(max-width: 700px) 190px, 410px" priority className="object-cover"/></div>
           <a className="br-pill br-pill-color" href="mailto:brenda.micaela80@gmail.com">LET&apos;S TALK <span aria-hidden="true">↗</span></a>
         </div>
         <div className="br-hero-bottom"><span>REACT / NEXT.JS / TYPESCRIPT / SUPABASE</span><a href="#work">SCROLL TO EXPLORE ↓</a></div>
