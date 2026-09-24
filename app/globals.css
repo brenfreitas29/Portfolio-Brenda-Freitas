@@ -325,3 +325,19 @@ section[id] { scroll-margin-top: 1.5rem; }
   .br-hero-lower { animation:br-arrive 1s .12s cubic-bezier(.2,.8,.2,1) both; }
   @keyframes br-arrive { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
 }
+
+/* Overlay actions remain available on touch and keyboard, and reveal on hover. */
+.br-project-overlay { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:space-between; padding:1.25rem; background:linear-gradient(180deg,#0b0b0edd,#0b0b0e55 45%,#0b0b0ef0); opacity:0; pointer-events:none; transition:opacity .25s ease; }
+.br-project-overlay > span { font-size:.74rem; font-weight:800; letter-spacing:.12em; }
+.br-project-overlay-actions { display:flex; flex-wrap:wrap; gap:.55rem; }
+.br-project-overlay-actions a { display:inline-flex; align-items:center; min-height:44px; border:1px solid #c6c6ce; border-radius:999px; padding:.6rem .85rem; background:#0b0b0ee8; color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.04em; }
+.br-project-overlay-actions a:hover,.br-project-overlay-actions a:focus-visible { background:#c7ff64; border-color:#c7ff64; color:#0b0b0e; }
+.br-project-image:hover .br-project-overlay,.br-project-image:focus-within .br-project-overlay { opacity:1; pointer-events:auto; }
+.br-project-image:hover img,.br-project-image:focus-within img { transform:scale(1.035); }
+@media(hover:none), (max-width:700px) {
+  .br-project-overlay { position:relative; inset:auto; opacity:1; pointer-events:auto; padding:.8rem; background:#1a1a22; }
+  .br-project-overlay > span { display:none; }
+  .br-project-image { aspect-ratio:auto; }
+  .br-project-image img { position:relative!important; display:block; width:100%; height:auto; aspect-ratio:1.5; object-fit:cover; }
+}
+@media(prefers-reduced-motion:reduce) { .br-project-overlay { transition:none; } }
