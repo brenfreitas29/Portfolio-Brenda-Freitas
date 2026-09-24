@@ -45,7 +45,7 @@ export default function ResumePage() {
           <div>
             <Link href="/" className="text-xs uppercase tracking-[0.25em] text-[#5748b9] print:hidden">← Portfolio</Link>
             <h1 className="mt-5 text-4xl font-semibold tracking-[-0.05em] md:text-6xl">Brenda Freitas</h1>
-            <p className="mt-3 text-lg text-[#24194f]/70">Full Stack Developer · SaaS · AI Automation</p>
+            <p className="mt-3 text-lg text-[#24194f]/70">Junior Full Stack Developer · React · Next.js</p>
             <p className="mt-2 text-sm text-[#24194f]/50">React · Next.js · TypeScript · Supabase · PostgreSQL</p>
           </div>
           <div className="flex flex-wrap gap-3 print:hidden">
@@ -57,8 +57,8 @@ export default function ResumePage() {
         <section className="grid gap-8 border-b border-[#24194f]/10 py-10 md:grid-cols-[0.65fr_1.35fr]">
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#5748b9]">Profile</h2>
           <div>
-            <p className="text-base leading-8 text-[#24194f]/75">Full Stack Developer building modern web applications and SaaS products from interface to production. Focused on React and Next.js applications with TypeScript, Supabase/PostgreSQL, authentication, database-backed workflows, responsive UI and cloud deployment.</p>
-            <p className="mt-4 text-base leading-8 text-[#24194f]/75">Product-minded approach: turning business requirements into maintainable interfaces, connected data flows and practical user experiences.</p>
+            <p className="text-base leading-8 text-[#24194f]/75">Junior Full Stack Developer building web applications and SaaS products from interface to production. Focused on React and Next.js applications with TypeScript, Supabase/PostgreSQL, authentication, database-backed workflows, responsive UI and cloud deployment.</p>
+            <p className="mt-4 text-base leading-8 text-[#24194f]/75">My background in customer support and operations helps me understand user needs and build practical, maintainable workflows. Based in Buenos Aires; available for remote junior roles.</p>
           </div>
         </section>
 
