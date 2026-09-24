@@ -50,7 +50,7 @@ export default function StudioHero() {
       <div className="br-hero-main">
         <div className="br-hero-kicker"><span>PORTFOLIO / 2026</span><span>BASED IN BUENOS AIRES · AVAILABLE REMOTELY</span></div>
         <h1>HI, I&apos;M <span>BRENDA</span></h1>
-        <div className="br-portrait"><Image src="/brenda-3d-avatar.webp" alt="3D character portrait of Brenda Freitas" fill sizes="(max-width: 700px) 190px, 410px" priority className="object-cover"/></div>
+        <div className="br-portrait"><Image src="/brenda-3d-avatar-reference.webp" alt="Personagem ilustrada de Brenda Freitas, com cabelos ruivos cacheados e piercing no nariz" fill sizes="(max-width: 700px) 190px, 410px" priority className="object-cover"/></div>
         <div className="br-hero-lower">
           <p>A junior full stack developer building useful products with thoughtful interfaces, connected data and real user needs in mind.</p>
           <a className="br-pill br-pill-color" href="mailto:brenda.micaela80@gmail.com">LET&apos;S TALK <span aria-hidden="true">↗</span></a>
