@@ -426,7 +426,8 @@ section[id] { scroll-margin-top: 1.5rem; }
 .odyssey-about-bio { display:flex; align-items:center; gap:1.8rem; }
 .odyssey-about-portrait { position:relative; flex:none; width:clamp(90px,10vw,140px); aspect-ratio:1; border-radius:50%; overflow:hidden; background:#151917; }
 .odyssey-about-portrait img { object-fit:cover; }
-.br-about { padding-top:8rem; }
+.br-about { margin-top:0; padding-top:8rem; background:#181d1b; border-radius:0; }
+.br-work::before { background:#181d1b; border-radius:0; }
 .br-about-top,.br-section-top { border-color:#747b77; }
 .br-about h2 span,.br-services h2 span,.br-contact h2 span,.br-work h2 span { color:#d29c84; }
 .br-preview { border-radius:0; border:0; filter:saturate(.8); }
