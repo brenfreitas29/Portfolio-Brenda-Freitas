@@ -7,6 +7,7 @@ import SideAtmosphere from "@/components/SideAtmosphere";
 const projects = [
   { number: "01", title: "FlowDesk", category: "FEATURED · AI SAAS / CRM", description: "Multi-tenant CRM for real business workflows — leads, Kanban pipeline, conversations, scheduling, automation, analytics and subscription-ready architecture.", tags: ["Next.js", "TypeScript", "Supabase", "Stripe", "RLS", "AI Automation"], image: "/projects/flowdesk-dashboard.jpg", previewUrl: "https://whats-app-crm-system-architecture.vercel.app", href: "/projects/flowdesk", liveUrl: "https://whats-app-crm-system-architecture.vercel.app", codeUrl: "https://github.com/brenfreitas29/FlowDesk" },
   { number: "02", title: "Hair & Skin Clinic", category: "BUSINESS WEBSITE / UX", description: "Responsive multilingual clinic experience built around credibility, clear service discovery and conversion-focused user journeys.", tags: ["Next.js", "React", "TypeScript", "Responsive UI", "Multilingual"], image: "/projects/hair-skin-clinic.png", href: "/projects/hair-skin-clinic", liveUrl: "https://graftclinic.vercel.app", codeUrl: "https://github.com/brenfreitas29/graftclinic" },
+  { number: "03", title: "VivaTrip", category: "TRAVEL APP / FULL STACK", description: "Travel planning app with authenticated journeys, saved trips and a connected pre-travel experience.", tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Authentication"], image: "/projects/vivatrip-portfolio.jpg", href: "/projects/vivatrip", liveUrl: "https://vivatrip.vercel.app", codeUrl: "https://github.com/brenfreitas29/VivaTrip" },
 ];
 
 const capabilities = [
@@ -28,7 +29,7 @@ export default function Home(){
           <p className="text-[10px] uppercase tracking-[.34em] text-[#cfc3f5]/45 sm:text-xs">Selected work · 2026</p>
           <div>
             <h2 className="max-w-5xl text-[clamp(3.1rem,7vw,5.5rem)] font-medium leading-[.95] tracking-[-.055em]">Products with design on the surface.<span className="block font-normal italic text-[#efb7df]">Engineering underneath.</span></h2>
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-[#cfc3f5]/58 sm:text-base">Live products across SaaS and business platforms — built with real authentication, databases, integrations and deployment.</p>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#e7dffa]">Three projects showing my work across interfaces, authentication, data and deployment. Explore each case study and its code.</p>
           </div>
         </div>
         <div className="flex flex-col gap-7 md:gap-9">{projects.map(project=><ProjectCard key={project.number} project={project}/>)}</div>
@@ -55,10 +56,10 @@ export default function Home(){
         <div className="grid gap-10 lg:grid-cols-[.58fr_1.42fr] lg:gap-20">
           <div><p className="text-xs uppercase tracking-[.35em] text-[#cfc3f5]/38">About / Availability</p><p className="mt-7 max-w-xs text-sm leading-7 text-[#cfc3f5]/45">Full Stack · Frontend · SaaS · AI Automation · Remote</p></div>
           <div>
-            <h2 className="max-w-5xl text-[clamp(3.2rem,7vw,5.8rem)] font-medium leading-[.94] tracking-[-.055em]">I like turning messy ideas into<span className="block font-normal italic text-[#efb7df]">clear, usable products.</span></h2>
+            <h2 className="max-w-5xl text-[clamp(3.2rem,7vw,5.8rem)] font-medium leading-[.94] tracking-[-.055em]">From customer workflows to<span className="block font-normal italic text-[#efb7df]">software people can use.</span></h2>
             <div className="mt-9 grid gap-4 md:grid-cols-2">
-              <div className="rounded-[1.3rem] border border-white/[.08] bg-[#1d1640]/55 p-6"><p className="text-[10px] uppercase tracking-[.22em] text-[#cfc3f5]/35">What I build</p><p className="mt-4 text-base leading-7 text-[#cfc3f5]/62">Modern SaaS products, web applications and AI-enabled workflows with a strong focus on usability and visual identity.</p></div>
-              <div className="rounded-[1.3rem] border border-white/[.08] bg-[#1d1640]/55 p-6"><p className="text-[10px] uppercase tracking-[.22em] text-[#cfc3f5]/35">Open to</p><p className="mt-4 text-base leading-7 text-[#cfc3f5]/62">Remote Full Stack, Frontend and product-focused roles, plus selected freelance product work.</p></div>
+              <div className="rounded-[1.3rem] border border-white/[.08] bg-[#1d1640]/55 p-6"><p className="text-sm uppercase tracking-[.12em] text-[#efb7df]">My path</p><p className="mt-4 text-base leading-7 text-[#e7dffa]">After working in customer support and business operations, I moved into web development. That background helps me translate real user needs into clear interfaces and practical workflows.</p></div>
+              <div className="rounded-[1.3rem] border border-white/[.08] bg-[#1d1640]/55 p-6"><p className="text-sm uppercase tracking-[.12em] text-[#efb7df]">Open to</p><p className="mt-4 text-base leading-7 text-[#e7dffa]">Junior Full Stack and Frontend roles, remotely from Buenos Aires, plus freelance website and SaaS projects. I work in Portuguese and Spanish.</p></div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3"><a href="/resume" className="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#1b1238]">View resume ↗</a><a href="https://github.com/brenfreitas29" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 px-6 py-3 text-sm text-[#cfc3f5]/75">GitHub ↗</a></div>
           </div>
