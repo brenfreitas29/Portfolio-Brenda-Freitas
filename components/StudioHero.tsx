@@ -37,6 +37,11 @@ export default function StudioHero() {
 
   return (
     <section className="editorial-hero" id="top">
+      <div className="editorial-ambient" aria-hidden="true">
+        <div className="editorial-ambient-grid" />
+        <div className="editorial-ambient-glow editorial-ambient-glow-one" />
+        <div className="editorial-ambient-glow editorial-ambient-glow-two" />
+      </div>
       <div className="editorial-container">
         <header className="editorial-header">
           <Link href="/" className="editorial-brand">Brenda Freitas<span>.</span></Link>
