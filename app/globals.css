@@ -401,6 +401,7 @@ section[id] { scroll-margin-top: 1.5rem; }
 .odyssey-scrim { z-index:-1; background:linear-gradient(90deg,rgba(7,18,22,.5) 0%,rgba(7,18,22,.17) 44%,transparent 78%),linear-gradient(0deg,rgba(8,13,14,.35),transparent 30%); transition:background .6s ease; }
 .odyssey-dark { color:#171b18; }
 .odyssey-dark .odyssey-scrim { background:linear-gradient(90deg,rgba(244,241,216,.27),transparent 72%); }
+.odyssey-dark .odyssey-footer { color:#fff; text-shadow:0 1px 6px #0a1613; }
 .odyssey-header { position:absolute; z-index:3; top:0; left:0; right:0; display:flex; align-items:flex-start; justify-content:space-between; gap:2rem; padding:clamp(1.5rem,3.2vw,3.5rem); font-size:.68rem; font-weight:700; letter-spacing:.16em; }
 .odyssey-logo { display:flex; align-items:start; gap:.18rem; width:42px; font-size:.93rem; line-height:.85; letter-spacing:-.09em; font-weight:900; }
 .odyssey-logo span { display:block; border:1.5px solid currentColor; padding:.17rem .28rem; }
