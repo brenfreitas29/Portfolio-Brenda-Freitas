@@ -471,7 +471,7 @@ section[id] { scroll-margin-top: 1.5rem; }
 
 /* Scroll depth: full-screen scenery stays behind the incoming content panels. */
 .odyssey-hero { position:sticky; top:0; z-index:0; --scroll-depth:0; }
-.odyssey-scenes { transform:translate3d(0,calc(var(--scroll-depth) * -45px),0) scale(calc(1 + var(--scroll-depth) * .1)); transform-origin:center center; will-change:transform; }
+.odyssey-scenes { transform:translate3d(0,calc(var(--scroll-depth) * -45px),0) scale(calc(1 + var(--scroll-depth) * .1)); transform-origin:center center; will-change:transform; backface-visibility:hidden; }
 .odyssey-content { translate:0 calc(var(--scroll-depth) * -65px); opacity:calc(1 - var(--scroll-depth) * .72); }
 .odyssey-header,.odyssey-footer { opacity:calc(1 - var(--scroll-depth) * .8); }
 .br-about { position:sticky; top:0; z-index:1; min-height:100svh; box-shadow:0 -28px 90px #07110fcc; border-radius:22px 22px 0 0; }
