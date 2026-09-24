@@ -7,25 +7,25 @@ import { createPortal } from "react-dom";
 
 const scenes = [
   {
-    number: "01", image: "/hero/astronaut.webp", imageAlt: "Astronauta flutuando acima de nuvens cor de rosa", theme: "light",
+    number: "01", image: "/hero/astronaut.webp", cloud: "/hero/cloud-layer-astronaut.webp", imageAlt: "Astronauta flutuando acima de nuvens cor de rosa", theme: "light",
     eyebrow: "BRENDA FREITAS · PORTFOLIO 2026", title: <>A NEW<br/>PERSPECTIVE</>,
     description: "Junior full stack developer creating thoughtful digital experiences, from the first interface to the working product.",
     link: "#about", action: "MEET BRENDA",
   },
   {
-    number: "02", image: "/hero/clouds.webp", imageAlt: "Carro entre nuvens cor de rosa", theme: "light",
+    number: "02", image: "/hero/clouds.webp", cloud: "/hero/cloud-layer-car.webp", imageAlt: "Carro entre nuvens cor de rosa", theme: "light",
     eyebrow: "01 / SELECTED WORK", title: <>IDEAS<br/>IN MOTION</>,
     description: "Real websites and SaaS projects built with React, Next.js, TypeScript and connected data.",
     link: "#work", action: "EXPLORE PROJECTS",
   },
   {
-    number: "03", image: "/hero/ufo.webp", imageAlt: "Objeto voador sobre uma colina em uma paisagem surreal", theme: "dark",
+    number: "03", image: "/hero/ufo.webp", cloud: "/hero/cloud-layer-ufo.webp", imageAlt: "Objeto voador sobre uma colina em uma paisagem surreal", theme: "dark",
     eyebrow: "02 / WHAT I BUILD", title: <>MAKE IT<br/>POSSIBLE</>,
     description: "Responsive interfaces, practical systems and product journeys designed around real people.",
     link: "#skills", action: "SEE MY SKILLS",
   },
   {
-    number: "04", image: "/hero/planet.webp", imageAlt: "Planeta luminoso sobre uma paisagem desértica", theme: "light",
+    number: "04", image: "/hero/planet.webp", cloud: "/hero/cloud-layer-planet.webp", imageAlt: "Planeta luminoso sobre uma paisagem desértica", theme: "light",
     eyebrow: "03 / LET'S CONNECT", title: <>THE NEXT<br/>CHAPTER</>,
     description: "Based in Buenos Aires, available remotely and ready to help bring a good idea to life.",
     link: "#contact", action: "GET IN TOUCH",
@@ -102,7 +102,7 @@ export default function StudioHero() {
   }, [open]);
 
   return <section ref={hero} className={`odyssey-hero odyssey-${scenes[active].theme}`} id="top" aria-label="Apresentação do portfólio" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }}>
-    <div className="odyssey-scenes" aria-hidden="true">{scenes.map((scene,index) => <div key={scene.number} className={`odyssey-scene ${index === active ? "is-active" : ""}`}><Image src={scene.image} alt="" fill priority={index===0} quality={90} sizes="100vw" className="odyssey-scene-image"/></div>)}</div>
+    <div className="odyssey-scenes" aria-hidden="true">{scenes.map((scene,index) => <div key={scene.number} className={`odyssey-scene odyssey-scene-${index+1} ${index === active ? "is-active" : ""}`}><Image src={scene.image} alt="" fill priority={index===0} quality={90} sizes="100vw" className="odyssey-scene-image"/><div className="odyssey-cloud odyssey-cloud-back"><Image src={scene.cloud} alt="" fill sizes="100vw" className="odyssey-cloud-image"/></div><div className="odyssey-cloud odyssey-cloud-front"><Image src={scene.cloud} alt="" fill sizes="100vw" className="odyssey-cloud-image"/></div></div>)}</div>
     <div className="odyssey-scrim" aria-hidden="true" />
     <header className="odyssey-header">
       <a href="#top" className="odyssey-logo" aria-label="Brenda Freitas, início"><span>B<br/>F</span><small>®</small></a>

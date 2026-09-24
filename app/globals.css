@@ -395,9 +395,17 @@ section[id] { scroll-margin-top: 1.5rem; }
 .odyssey-scenes { z-index:-2; }
 .odyssey-scene { opacity:0; transition:opacity 1.15s ease; }
 .odyssey-scene.is-active { opacity:1; z-index:1; }
-.odyssey-scene-image { object-fit:cover; object-position:center center; transform:scale(1.035); }
-.odyssey-scene.is-active .odyssey-scene-image { animation:odyssey-drift 9s ease-out both; }
-@keyframes odyssey-drift { from {transform:scale(1.08) translateY(1%)} to {transform:scale(1) translateY(0)} }
+.odyssey-scene-image { object-fit:cover; object-position:center center; }
+/* Each cloud is a transparent image with its own motion, independent of the scene's subject. */
+.odyssey-cloud { position:absolute; pointer-events:none; width:120vw; height:40vw; max-height:66vh; min-height:270px; bottom:-20vw; left:-10vw; will-change:transform; }
+.odyssey-cloud-image { object-fit:fill; }
+.odyssey-cloud-front { z-index:2; opacity:.7; animation:odyssey-cloud-front 21s ease-in-out infinite alternate; }
+.odyssey-cloud-back { z-index:1; width:76vw; height:25vw; min-height:150px; bottom:5vw; left:34vw; opacity:.31; filter:blur(2px); animation:odyssey-cloud-back 29s ease-in-out infinite alternate; }
+.odyssey-scene-3 .odyssey-cloud-front { opacity:.54; }
+.odyssey-scene-4 .odyssey-cloud-front { opacity:.45; }
+.odyssey-scene-4 .odyssey-cloud-back { opacity:.21; }
+@keyframes odyssey-cloud-front { from { transform:translate3d(-3.5vw,1.3vw,0); } to { transform:translate3d(3.5vw,-1vw,0); } }
+@keyframes odyssey-cloud-back { from { transform:translate3d(3vw,-.8vw,0); } to { transform:translate3d(-4vw,1vw,0); } }
 .odyssey-scrim { z-index:-1; background:linear-gradient(90deg,rgba(7,18,22,.5) 0%,rgba(7,18,22,.17) 44%,transparent 78%),linear-gradient(0deg,rgba(8,13,14,.35),transparent 30%); transition:background .6s ease; }
 .odyssey-dark { color:#171b18; }
 .odyssey-dark .odyssey-scrim { background:linear-gradient(90deg,rgba(244,241,216,.27),transparent 72%); }
@@ -463,11 +471,13 @@ section[id] { scroll-margin-top: 1.5rem; }
  .odyssey-footer > a { display:none; }
  .odyssey-pager { grid-column:2; }
  .odyssey-scene-image { object-position:62% center; }
+ .odyssey-cloud-front { width:190vw; height:63vw; min-height:240px; bottom:-31vw; left:-45vw; }
+ .odyssey-cloud-back { width:145vw; height:48vw; min-height:165px; bottom:15vw; left:10vw; }
  .odyssey-about-bio { align-items:start; }
  .odyssey-about-portrait { width:76px; }
 }
 @media(max-width:420px) { .odyssey-content h1 { font-size:clamp(3rem,13vw,4rem); } .odyssey-intro p { max-width:260px; } .odyssey-about-bio { flex-direction:column; } }
-@media(prefers-reduced-motion:reduce) { .odyssey-scene,.odyssey-scene-image,.odyssey-content { animation:none!important; transition:none!important; } }
+@media(prefers-reduced-motion:reduce) { .odyssey-scene,.odyssey-scene-image,.odyssey-cloud,.odyssey-content { animation:none!important; transition:none!important; will-change:auto; } }
 
 /* Scroll depth: full-screen scenery stays behind the incoming content panels. */
 .odyssey-hero { position:sticky; top:0; z-index:0; --scroll-depth:0; }
