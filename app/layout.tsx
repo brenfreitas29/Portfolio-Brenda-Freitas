@@ -6,21 +6,21 @@ import CustomCursor from "@/components/CustomCursor";
 export const metadata: Metadata = {
   metadataBase: new URL("https://brenda-studio-portfolio.vercel.app"),
   title: {
-    default: "Brenda Freitas — Product, Full Stack & AI",
+    default: "Brenda Freitas — Junior Full Stack Developer",
     template: "%s | Brenda Freitas",
   },
   description:
-    "Full Stack Developer portfolio focused on Next.js, React, TypeScript, Supabase, SaaS products, CRM workflows and AI automation.",
-  keywords: ["Full Stack Developer", "Next.js", "React", "TypeScript", "Supabase", "SaaS", "Frontend Developer", "AI Automation"],
+    "Junior Full Stack Developer in Buenos Aires. Explore real React, Next.js and Supabase projects: FlowDesk, VivaTrip and Hair & Skin Clinic.",
+  keywords: ["Junior Full Stack Developer", "Next.js", "React", "TypeScript", "Supabase", "SaaS", "Frontend Developer", "AI Automation"],
   openGraph: {
-    title: "Brenda Freitas — Full Stack Developer",
+    title: "Brenda Freitas — Junior Full Stack Developer",
     description: "SaaS, full-stack products, React/Next.js applications and AI-enabled workflows.",
     type: "website",
     siteName: "Brenda Freitas Portfolio",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Brenda Freitas — Full Stack Developer",
+    card: "summary",
+    title: "Brenda Freitas — Junior Full Stack Developer",
     description: "SaaS, full-stack products, React/Next.js applications and AI-enabled workflows.",
   },
 };
