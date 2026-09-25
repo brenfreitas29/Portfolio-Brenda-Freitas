@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   { number: "01", title: "Hair & Skin Clinic", category: "BUSINESS WEBSITE", description: "A multilingual clinic website with clear service discovery and responsive booking journeys.", tags: ["Next.js", "React", "TypeScript", "Responsive UI"], image: "/projects/hair-skin-clinic.png", href: "/projects/hair-skin-clinic", liveUrl: "https://graftclinic.vercel.app", codeUrl: "https://github.com/brenfreitas29/graftclinic" },
-  { number: "02", title: "VivaTrip", category: "TRAVEL APP", status: "IN PROGRESS", description: "A travel planning product taking shape around saved trips, authentication and practical pre-travel workflows.", tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"], image: "/projects/vivatrip-current.webp", href: "/projects/vivatrip", liveUrl: "https://vivatrip.vercel.app", codeUrl: "https://github.com/brenfreitas29/VivaTrip" },
+  { number: "02", title: "VivaTrip", category: "TRAVEL APP", status: "IN PROGRESS", description: "A travel planning product taking shape around saved trips, authentication and practical pre-travel workflows.", tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"], image: "/projects/vivatrip-preview-2026.webp", href: "/projects/vivatrip", liveUrl: "https://vivatrip.vercel.app", codeUrl: "https://github.com/brenfreitas29/VivaTrip" },
   { number: "03", title: "Revilo Hair Transplant", category: "CLINIC WEBSITE", status: "IN PROGRESS", description: "A responsive website for a hair transplant clinic, with a focus on clear treatment information and a welcoming consultation journey.", tags: ["Next.js", "React", "Responsive UI", "Healthcare"], image: "/projects/revilo-preview.jpg", href: "/projects/revilo" },
 ];
 
