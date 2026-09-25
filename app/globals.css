@@ -620,3 +620,21 @@ section[id] { scroll-margin-top: 1.5rem; }
 .br-project-status { display:inline-flex; align-items:center; gap:.65rem; border:1px solid #d9aa94; border-radius:999px; padding:.7rem 1rem; color:#f1c6b2; font-size:.66rem; font-weight:800; letter-spacing:.12em; white-space:nowrap; }
 .br-project-status span { width:.45rem; height:.45rem; border-radius:50%; background:#e7b594; box-shadow:0 0 0 .25rem #e7b59422; }
 @media(max-width:700px) { .br-project-status { padding:.55rem .8rem; } }
+
+/* The closing panel belongs to the same dark sequence as About and Work. */
+.br-contact { background:#181d1b; color:#f6f3eb; padding:clamp(4.5rem,7vw,7rem) 0 clamp(3rem,5vw,5rem); }
+.br-contact .br-section-top,.br-contact-actions,.br-contact-bottom { border-color:#68736c; }
+.br-contact .br-section-top { color:#d3d7d0; }
+.br-contact-intro { padding:clamp(3.5rem,5.5vw,6rem) 0 clamp(3.5rem,5vw,5rem); }
+.br-contact-eyebrow { color:#e3b4a0; }
+.br-contact-spark { color:#e1a88f; }
+.br-contact h2 { font-size:clamp(3.7rem,6.3vw,7.2rem); }
+.br-contact h2 span { color:#d5a18c; }
+.br-contact-intro > p { color:#cdd3ca; }
+.br-contact-mail > span,.br-contact-bottom > span { color:#aeb9ad; }
+.br-contact-mail a { color:#f6f3eb; }
+.br-contact-mail a:hover,.br-contact-bottom .br-social a:hover { color:#e9b39b; }
+.br-contact-cta { color:#1b2420; background:#e5b198; }
+.br-contact-cta:hover { color:#1b2420; background:#f2cbb6; }
+.br-contact-bottom .br-social { color:#f1f3ea; }
+@media(max-width:700px) { .br-contact { padding:4rem 0 3rem; } .br-contact-intro { padding:3rem 0; } }
