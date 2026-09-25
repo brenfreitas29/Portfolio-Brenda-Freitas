@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Brenda Freitas",
   },
   description:
-    "Junior Full Stack Developer in Buenos Aires. Explore real React, Next.js and Supabase projects: FlowDesk, VivaTrip and Hair & Skin Clinic.",
+    "Junior Full Stack Developer in Buenos Aires. Explore real React and Next.js projects: Hair & Skin Clinic, VivaTrip and Revilo.",
   keywords: ["Junior Full Stack Developer", "Next.js", "React", "TypeScript", "Supabase", "SaaS", "Frontend Developer", "AI Automation"],
   openGraph: {
     title: "Brenda Freitas — Junior Full Stack Developer",

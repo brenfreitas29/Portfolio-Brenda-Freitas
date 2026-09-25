@@ -15,16 +15,9 @@ const groups = [
 
 const projects = [
   {
-    name: "FlowDesk",
-    type: "Multi-tenant SaaS / CRM",
-    description: "Built a WhatsApp-centered CRM product connecting authentication, lead management, Kanban pipeline workflows, conversations, scheduling, automation and analytics in one workspace.",
-    stack: "Next.js · React · TypeScript · Supabase · PostgreSQL · RLS · Stripe · Vercel",
-    href: "/projects/flowdesk",
-  },
-  {
     name: "VivaTrip",
-    type: "Travel SaaS / Full Stack",
-    description: "Built a connected travel-planning experience with SSR authentication, protected routes, persistent sessions, saved trip context and destination-aware pre-trip workflows.",
+    type: "Travel SaaS / Full Stack · In progress",
+    description: "Developing a connected travel-planning experience with authentication, saved trip context and destination-aware pre-trip workflows.",
     stack: "Next.js · React · TypeScript · Supabase · PostgreSQL · SSR Auth · Vercel",
     href: "/projects/vivatrip",
   },
@@ -34,6 +27,13 @@ const projects = [
     description: "Developed a responsive service platform with reusable React components, multilingual content structure and conversion-focused UX across desktop and mobile.",
     stack: "Next.js · React · TypeScript · Responsive UI · Multilingual UX · Vercel",
     href: "/projects/hair-skin-clinic",
+  },
+  {
+    name: "Revilo Hair Transplant",
+    type: "Clinic website · In progress",
+    description: "Developing a responsive website for a hair transplant clinic, focused on clear treatment information and a welcoming consultation journey.",
+    stack: "Next.js · React · Responsive UI",
+    href: "/projects/revilo",
   },
 ];
 
