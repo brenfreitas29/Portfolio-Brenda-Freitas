@@ -709,12 +709,3 @@ section[id] { scroll-margin-top: 1.5rem; }
   .br-resume-header a:hover,.br-resume-project a:hover { transform:translateY(-2px); }
   @keyframes resume-appear { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
 }
-
-.br-resume-avatar { display:flex; justify-content:flex-end; height:220px; overflow:hidden; }
-.br-resume-avatar img { display:block; width:140px; height:210px; object-fit:contain; }
-@media screen and (prefers-reduced-motion:no-preference) {
-  .br-resume-avatar img { animation:resume-float 3.8s ease-in-out infinite; }
-  @keyframes resume-float { 0%,100% { transform:translateY(5px) rotate(-2deg); } 50% { transform:translateY(-12px) rotate(2deg); } }
-}
-@media(max-width:700px) { .br-resume-avatar { height:155px; } .br-resume-avatar img { width:100px; height:150px; } }
-@media print { .br-resume-avatar { display:none!important; } }
