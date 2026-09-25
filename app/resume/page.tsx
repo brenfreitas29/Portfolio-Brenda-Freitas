@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Resume | Brenda Freitas — Junior Full Stack Developer",
@@ -54,6 +55,11 @@ export default function ResumePage() {
             <a href="mailto:brenda.micaela80@gmail.com" className="br-resume-contact rounded-full px-5 py-2.5 text-sm font-medium transition">Email me ↗</a>
           </div>
         </header>
+
+        <div className="br-resume-walk" aria-hidden="true">
+          <span className="br-resume-walk-label">FROM IDEA TO BUILD <span>↗</span></span>
+          <span className="br-resume-walker"><Image src="/brenda-walk.webp" alt="" width={110} height={165} sizes="110px" className="br-resume-walker-image" /></span>
+        </div>
 
         <section className="br-resume-section grid gap-8 py-10 md:grid-cols-[0.55fr_1.45fr]">
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9d5e48]">Profile</h2>

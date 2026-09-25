@@ -709,3 +709,18 @@ section[id] { scroll-margin-top: 1.5rem; }
   .br-resume-header a:hover,.br-resume-project a:hover { transform:translateY(-2px); }
   @keyframes resume-appear { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
 }
+
+.br-resume-walk { position:relative; height:185px; overflow:hidden; border-bottom:1px solid #617066; }
+.br-resume-walk::after { content:""; position:absolute; right:0; bottom:15px; left:0; height:1px; background:linear-gradient(90deg,transparent,#d5a18c 16%,#d5a18c 85%,transparent); opacity:.55; }
+.br-resume-walk-label { position:absolute; left:0; top:22px; color:#b7c5b8; font-size:.65rem; font-weight:800; letter-spacing:.18em; }
+.br-resume-walk-label span { color:#e5b198; }
+.br-resume-walker { position:absolute; z-index:1; left:0; bottom:14px; display:block; width:110px; height:165px; }
+.br-resume-walker-image { display:block; width:100%; height:100%; object-fit:contain; object-position:bottom; }
+@media screen and (prefers-reduced-motion:no-preference) {
+  .br-resume-walker { animation:resume-walk-across 19s linear infinite alternate; }
+  .br-resume-walker-image { animation:resume-walk-step .54s ease-in-out infinite alternate; transform-origin:50% 90%; }
+  @keyframes resume-walk-across { to { left:calc(100% - 110px); } }
+  @keyframes resume-walk-step { from { transform:translateY(0) rotate(-1deg); } to { transform:translateY(-5px) rotate(1deg); } }
+}
+@media(max-width:700px) { .br-resume-walk { height:140px; } .br-resume-walker { width:78px; height:117px; } @keyframes resume-walk-across { to { left:calc(100% - 78px); } } }
+@media print { .br-resume-walk { display:none!important; } }
