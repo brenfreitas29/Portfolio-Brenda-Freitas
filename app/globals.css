@@ -638,3 +638,23 @@ section[id] { scroll-margin-top: 1.5rem; }
 .br-contact-cta:hover { color:#1b2420; background:#f2cbb6; }
 .br-contact-bottom .br-social { color:#f1f3ea; }
 @media(max-width:700px) { .br-contact { padding:4rem 0 3rem; } .br-contact-intro { padding:3rem 0; } }
+
+/* Contact closes the editorial sequence with one continuous dark canvas. */
+.br-contact { padding-bottom:2rem; overflow:hidden; }
+.br-contact-intro { grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr); align-items:center; gap:clamp(2rem,5vw,6rem); padding:clamp(4rem,6vw,7rem) 0; }
+.br-contact h2 { font-size:clamp(3.4rem,6.2vw,7rem); line-height:.98; }
+.br-contact-aside { display:flex; flex-direction:column; align-items:flex-start; gap:2rem; }
+.br-contact-aside p { max-width:340px; margin:0; color:#cdd3ca; font-size:clamp(1rem,1.3vw,1.18rem); line-height:1.6; }
+.br-contact-orbit { position:relative; display:grid; place-items:center; width:112px; aspect-ratio:1; border:1px solid #8a7770; border-radius:50%; color:#e5b198; transform:rotate(-18deg); }
+.br-contact-orbit::before,.br-contact-orbit::after { content:""; position:absolute; inset:13px -16px; border:1px solid #8a7770; border-radius:50%; transform:rotate(48deg); }
+.br-contact-orbit::after { inset:-13px 25px; transform:rotate(-35deg); }
+.br-contact-orbit span { font-size:2.5rem; line-height:1; }
+.br-contact-actions { align-items:center; padding:2.2rem 0; }
+.br-contact-mail a { font-size:clamp(1.25rem,2.1vw,2.15rem); }
+.br-contact-cta { min-height:64px; }
+.br-footer { width:100%; max-width:none; margin:0; background:#181d1b; color:#b3beb3; }
+.br-footer-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; padding:1.25rem 0 2rem; border-top:1px solid #68736c; }
+.br-footer a:hover { color:#e5b198; }
+@media(max-width:900px) { .br-contact-intro { grid-template-columns:1fr; gap:2.5rem; } .br-contact-aside { flex-direction:row; align-items:center; } }
+@media(max-width:700px) { .br-contact-intro { padding:3.5rem 0; } .br-contact-aside { gap:1.5rem; } .br-contact-orbit { width:72px; flex:none; } .br-contact-orbit span { font-size:1.8rem; } .br-contact-aside p { font-size:.95rem; } .br-contact-actions { align-items:stretch; } .br-footer-inner { flex-direction:column; } }
+@media(prefers-reduced-motion:no-preference) { .br-contact-orbit span { animation:br-orbit-turn 18s linear infinite; } @keyframes br-orbit-turn { to { transform:rotate(360deg); } } }
