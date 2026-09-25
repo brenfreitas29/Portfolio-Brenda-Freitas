@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  background: #24194f;
+  background: #181d1b;
   color: #ffffff;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +31,7 @@ body {
 }
 
 ::selection {
-  background: rgba(216, 180, 255, 0.35);
+  background: rgba(229, 177, 152, 0.35);
   color: #ffffff;
 }
 
@@ -53,23 +53,23 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #24194f;
+  background: #181d1b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(216, 180, 255, 0.35);
+  background: rgba(229, 177, 152, 0.45);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(240, 166, 218, 0.55);
+  background: rgba(229, 177, 152, 0.7);
 }
 
 /* Firefox */
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(216, 180, 255, 0.35) #24194f;
+  scrollbar-color: rgba(229, 177, 152, 0.45) #181d1b;
 }
 
 /* =========================================================

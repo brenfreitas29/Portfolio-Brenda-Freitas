@@ -45,7 +45,7 @@ export default function RootLayout({
 
       <body
         suppressHydrationWarning
-        className="bg-[#24194f] text-white antialiased"
+        className="bg-[#181d1b] text-white antialiased"
       >
         <CustomCursor />
         {children}
