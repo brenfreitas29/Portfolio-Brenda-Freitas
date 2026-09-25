@@ -674,3 +674,24 @@ section[id] { scroll-margin-top: 1.5rem; }
 .br-services-end { border-color:#68736c; }
 .br-services-end > span { color:#bdc9bc; }
 .br-services-end a:hover { color:#e5b198; }
+
+/* Resume: consistent on screen, straightforward on paper. */
+.br-resume { background:#181d1b; color:#f6f3eb; }
+.br-resume-header,.br-resume-section { border-bottom:1px solid #617066; }
+.br-resume-header { align-items:end; }
+.br-resume-header h1 { max-width:850px; }
+.br-resume-header h1 span { color:#d5a18c; }
+.br-resume-kicker,.br-resume-section h2 { color:#e5b198; }
+.br-resume-role { color:#f4f2e9; }
+.br-resume-subtitle { color:#b7c5b8; }
+.br-resume-contact { background:#e5b198; color:#18211f; }
+.br-resume-contact:hover { background:#f3cab5; }
+.br-resume-header a:not(.br-resume-contact):hover,.br-resume-project a:hover { color:#f3cab5; }
+.br-resume-section > div > p,.br-resume-section > div > div p,.br-resume-project p { color:#cbd6cc; }
+.br-resume-project { padding:1.3rem 0 1.5rem; border-top:1px solid #617066; }
+.br-resume-project:first-child { border-top:0; padding-top:0; }
+.br-resume-project h3 { color:#f6f3eb; }
+.br-resume-project span,.br-resume-project a { color:#e5b198; }
+.br-resume-section > div > div > div > p { border-color:#617066; }
+@media(max-width:767px) { .br-resume-header { align-items:start; } .br-resume-header h1 { font-size:clamp(3.4rem,12vw,5.5rem); } .br-resume-kicker { margin-top:3rem; } }
+@media print { .br-resume { background:#fff!important; color:#18211f!important; } .br-resume-inner { max-width:none!important; } .br-resume-header,.br-resume-section,.br-resume-project { border-color:#a9b2a8!important; break-inside:avoid; } .br-resume-header h1 span,.br-resume-section h2,.br-resume-project span { color:#9d5e48!important; } .br-resume-role,.br-resume-project h3 { color:#18211f!important; } .br-resume-subtitle,.br-resume-section p,.br-resume-section > div > p,.br-resume-section > div > div p { color:#344139!important; } }

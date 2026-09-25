@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Resume | Brenda Freitas — Full Stack Developer",
-  description: "Full Stack Developer resume focused on Next.js, React, TypeScript, Supabase, SaaS products and AI automation.",
+  title: "Resume | Brenda Freitas — Junior Full Stack Developer",
+  description: "Brenda Freitas's junior full stack developer resume: React, Next.js, TypeScript, Supabase and selected real projects.",
 };
 
 const groups = [
@@ -39,34 +39,35 @@ const projects = [
 
 export default function ResumePage() {
   return (
-    <main className="min-h-screen bg-[#f3f0e8] px-5 py-8 text-[#18211f] md:px-10 md:py-12 print:bg-white print:px-0 print:py-0">
-      <div className="mx-auto max-w-5xl rounded-[2rem] bg-white p-7 shadow-[0_30px_100px_rgba(36,25,79,0.10)] md:p-12 print:max-w-none print:rounded-none print:p-0 print:shadow-none">
-        <header className="flex flex-col gap-7 border-b border-[#18211f]/10 pb-8 md:flex-row md:items-end md:justify-between">
+    <main className="br-resume min-h-screen px-5 py-8 md:px-10 md:py-12 print:px-0 print:py-0">
+      <div className="br-resume-inner mx-auto max-w-6xl py-5 md:py-10 print:max-w-none print:p-0">
+        <header className="br-resume-header flex flex-col gap-7 pb-12 md:flex-row md:items-end md:justify-between">
           <div>
             <Link href="/" className="text-xs uppercase tracking-[0.25em] text-[#9d5e48] print:hidden">← Portfolio</Link>
-            <h1 className="mt-5 text-4xl font-semibold tracking-[-0.05em] md:text-6xl">Brenda Freitas</h1>
-            <p className="mt-3 text-lg text-[#18211f]/70">Junior Full Stack Developer · React · Next.js</p>
-            <p className="mt-2 text-sm text-[#18211f]/50">React · Next.js · TypeScript · Supabase · PostgreSQL</p>
+            <span className="br-resume-kicker mt-16 block text-xs font-bold uppercase tracking-[0.22em]">DEVELOPER / BUENOS AIRES</span>
+            <h1 className="mt-5 text-5xl font-black leading-[.92] tracking-[-0.075em] md:text-8xl">Brenda <span>Freitas.</span></h1>
+            <p className="br-resume-role mt-7 text-xl md:text-2xl">Junior Full Stack Developer</p>
+            <p className="br-resume-subtitle mt-3 text-sm">React · Next.js · TypeScript · Supabase · PostgreSQL</p>
           </div>
           <div className="flex flex-wrap gap-3 print:hidden">
             <a href="https://github.com/brenfreitas29" target="_blank" rel="noopener noreferrer" className="rounded-full border border-[#18211f]/15 px-5 py-2.5 text-sm font-medium transition hover:border-[#9d5e48]/40">GitHub ↗</a>
-            <Link href="/#contact" className="rounded-full bg-[#9d5e48] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#334c3d]">Contact</Link>
+            <a href="mailto:brenda.micaela80@gmail.com" className="br-resume-contact rounded-full px-5 py-2.5 text-sm font-medium transition">Email me ↗</a>
           </div>
         </header>
 
-        <section className="grid gap-8 border-b border-[#18211f]/10 py-10 md:grid-cols-[0.65fr_1.35fr]">
+        <section className="br-resume-section grid gap-8 py-10 md:grid-cols-[0.55fr_1.45fr]">
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9d5e48]">Profile</h2>
           <div>
-            <p className="text-base leading-8 text-[#18211f]/75">Junior Full Stack Developer building web applications and SaaS products from interface to production. Focused on React and Next.js applications with TypeScript, Supabase/PostgreSQL, authentication, database-backed workflows, responsive UI and cloud deployment.</p>
-            <p className="mt-4 text-base leading-8 text-[#18211f]/75">My background in customer support and operations helps me understand user needs and build practical, maintainable workflows. Based in Buenos Aires; available for remote junior roles.</p>
+            <p className="text-base leading-8">I build responsive web applications with React, Next.js and TypeScript, connecting interfaces to authentication, APIs and Supabase/PostgreSQL data.</p>
+            <p className="mt-4 text-base leading-8">My background in customer support helps me understand users and turn complex workflows into practical experiences. Based in Buenos Aires and open to remote junior roles.</p>
           </div>
         </section>
 
-        <section className="grid gap-8 border-b border-[#18211f]/10 py-10 md:grid-cols-[0.65fr_1.35fr]">
+        <section className="br-resume-section grid gap-8 py-10 md:grid-cols-[0.55fr_1.45fr]">
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9d5e48]">Selected projects</h2>
           <div className="space-y-9">
             {projects.map((project) => (
-              <article key={project.name}>
+              <article key={project.name} className="br-resume-project">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="text-xl font-semibold">{project.name}</h3>
                   <span className="text-xs uppercase tracking-[0.16em] text-[#9d5e48]/70">{project.type}</span>
@@ -79,14 +80,14 @@ export default function ResumePage() {
           </div>
         </section>
 
-        <section className="grid gap-8 border-b border-[#18211f]/10 py-10 md:grid-cols-[0.65fr_1.35fr]">
+        <section className="br-resume-section grid gap-8 py-10 md:grid-cols-[0.55fr_1.45fr]">
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9d5e48]">Technical skills</h2>
           <div className="grid gap-6 sm:grid-cols-2">
             {groups.map(([title, skills]) => <div key={title}><h3 className="font-semibold">{title}</h3><p className="mt-2 leading-7 text-[#18211f]/70">{skills}</p></div>)}
           </div>
         </section>
 
-        <section className="grid gap-8 py-10 md:grid-cols-[0.65fr_1.35fr]">
+        <section className="br-resume-section grid gap-8 py-10 md:grid-cols-[0.55fr_1.45fr]">
           <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9d5e48]">What I bring</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {["End-to-end product implementation", "Responsive and reusable React interfaces", "Authentication and data-backed workflows", "SaaS architecture and product thinking", "API and third-party integrations", "Production deployment and iteration"].map((item) => <p key={item} className="border-t border-[#18211f]/10 pt-3 text-sm leading-6 text-[#18211f]/70">{item}</p>)}
