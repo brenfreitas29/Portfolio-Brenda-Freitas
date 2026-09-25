@@ -58,7 +58,13 @@ export default function ResumePage() {
 
         <div className="br-resume-walk" aria-hidden="true">
           <span className="br-resume-walk-label">FROM IDEA TO BUILD <span>↗</span></span>
-          <span className="br-resume-walker"><Image src="/brenda-walk.webp" alt="" width={110} height={165} sizes="110px" className="br-resume-walker-image" /></span>
+          <span className="br-resume-walker">
+            <span className="br-resume-walker-bounce">
+              <Image src="/brenda-walk.webp" alt="" width={110} height={165} sizes="110px" className="br-resume-walker-image br-resume-leg br-resume-leg-back" />
+              <Image src="/brenda-walk.webp" alt="" width={110} height={165} sizes="110px" className="br-resume-walker-image br-resume-leg br-resume-leg-front" />
+              <Image src="/brenda-walk.webp" alt="" width={110} height={165} sizes="110px" className="br-resume-walker-image br-resume-walker-upper" />
+            </span>
+          </span>
         </div>
 
         <section className="br-resume-section grid gap-8 py-10 md:grid-cols-[0.55fr_1.45fr]">
