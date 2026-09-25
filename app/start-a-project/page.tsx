@@ -209,10 +209,10 @@ export default function StartProjectPage() {
 
   if (isSuccess) {
     return (
-      <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#24194f] px-6 text-white">
-        <div className="pointer-events-none absolute -left-52 top-20 h-[650px] w-[650px] rounded-full bg-[#8870ff]/15 blur-[170px]" />
+      <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#181d1b] px-6 text-white">
+        <div className="pointer-events-none absolute -left-52 top-20 h-[650px] w-[650px] rounded-full bg-[#a2b5a0]/15 blur-[170px]" />
 
-        <div className="pointer-events-none absolute -right-56 bottom-[-120px] h-[700px] w-[700px] rounded-full bg-[#e895d2]/15 blur-[180px]" />
+        <div className="pointer-events-none absolute -right-56 bottom-[-120px] h-[700px] w-[700px] rounded-full bg-[#e5b198]/15 blur-[180px]" />
 
         <motion.div
           initial={{
@@ -246,19 +246,19 @@ export default function StartProjectPage() {
               stiffness: 180,
               damping: 16,
             }}
-            className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#f0b6e5]/35 bg-[#7258c5]/30 text-2xl text-[#f5c7e8]"
+            className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#e5b198]/35 bg-[#485a4e]/30 text-2xl text-[#f1cbb8]"
           >
             ✓
           </motion.div>
 
-          <p className="mt-9 text-xs uppercase tracking-[0.35em] text-[#d7cdf2]/55">
+          <p className="mt-9 text-xs uppercase tracking-[0.35em] text-[#e6e9df]/55">
             Project received
           </p>
 
           <h1 className="mt-5 text-5xl font-medium leading-[0.95] tracking-[-0.055em] md:text-7xl">
             Thanks, {form.name}.
 
-            <span className="mt-2 block bg-gradient-to-r from-[#f0a6da] via-[#d8b4ff] to-[#aaa0ff] bg-clip-text text-transparent">
+            <span className="mt-2 block bg-gradient-to-r from-[#e5b198] via-[#d1b4a1] to-[#b0c3ae] bg-clip-text text-transparent">
               Let&apos;s build something great.
             </span>
           </h1>
@@ -272,7 +272,7 @@ export default function StartProjectPage() {
             <Link
               href="/"
               data-cursor="interactive"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-xs font-medium uppercase tracking-[0.16em] text-[#31236c] transition duration-300 hover:scale-[1.03] hover:bg-[#f5d8ef]"
+              className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-xs font-medium uppercase tracking-[0.16em] text-[#18211f] transition duration-300 hover:scale-[1.03] hover:bg-[#f2d1bd]"
             >
               Back to portfolio
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -295,14 +295,14 @@ export default function StartProjectPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#24194f] text-white">
+    <main className="relative min-h-screen overflow-hidden bg-[#181d1b] text-white">
       {/* BACKGROUND */}
 
-      <div className="pointer-events-none fixed -left-52 top-20 h-[650px] w-[650px] rounded-full bg-[#8870ff]/15 blur-[170px]" />
+      <div className="pointer-events-none fixed -left-52 top-20 h-[650px] w-[650px] rounded-full bg-[#a2b5a0]/15 blur-[170px]" />
 
-      <div className="pointer-events-none fixed -right-56 bottom-[-120px] h-[700px] w-[700px] rounded-full bg-[#e895d2]/15 blur-[180px]" />
+      <div className="pointer-events-none fixed -right-56 bottom-[-120px] h-[700px] w-[700px] rounded-full bg-[#e5b198]/15 blur-[180px]" />
 
-      <div className="pointer-events-none fixed left-1/2 top-[40%] h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#a77cff]/10 blur-[170px]" />
+      <div className="pointer-events-none fixed left-1/2 top-[40%] h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#a2b5a0]/10 blur-[170px]" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-12 pt-8 md:px-10">
         {/* HEADER */}
@@ -330,7 +330,7 @@ export default function StartProjectPage() {
               {String(totalSteps).padStart(2, "0")}
             </span>
 
-            <span className="text-[10px] uppercase tracking-[0.22em] text-[#e8b9e5]/60">
+            <span className="text-[10px] uppercase tracking-[0.22em] text-[#e5b198]/60">
               {Math.round(progress)}%
             </span>
           </div>
@@ -344,7 +344,7 @@ export default function StartProjectPage() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="h-full bg-gradient-to-r from-[#aa92ff] via-[#d8b4ff] to-[#f0a6da]"
+              className="h-full bg-gradient-to-r from-[#90aa91] via-[#d1b4a1] to-[#e5b198]"
             />
           </div>
         </div>
@@ -378,14 +378,14 @@ export default function StartProjectPage() {
                     duration: 0.45,
                   }}
                 >
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d7cdf2]/55">
+                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#e6e9df]/55">
                     Project Type
                   </p>
 
                   <h1 className="max-w-4xl text-5xl font-medium leading-[0.98] tracking-[-0.05em] md:text-7xl">
                     What do you want
 
-                    <span className="block bg-gradient-to-r from-[#f0a6da] via-[#d8b4ff] to-[#aaa0ff] bg-clip-text text-transparent">
+                    <span className="block bg-gradient-to-r from-[#e5b198] via-[#d1b4a1] to-[#b0c3ae] bg-clip-text text-transparent">
                       to build?
                     </span>
                   </h1>
@@ -418,13 +418,13 @@ export default function StartProjectPage() {
                             backdrop-blur-xl transition-all duration-500
                             ${
                               selected
-                                ? "border-[#f0b6e5]/55 bg-[#6a50be]/35 shadow-[0_20px_70px_rgba(205,135,255,0.20)]"
+                                ? "border-[#e5b198]/55 bg-[#35463d]/35 shadow-[0_20px_70px_rgba(229,177,152,0.20)]"
                                 : "border-white/12 bg-white/[0.035] hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.055]"
                             }
                           `}
                         >
                           <div className="flex items-start justify-between">
-                            <span className="text-xl text-[#e9b9e5]/70">
+                            <span className="text-xl text-[#e5b198]/70">
                               {service.icon}
                             </span>
 
@@ -433,7 +433,7 @@ export default function StartProjectPage() {
                                 scale: selected ? 1 : 0.7,
                                 opacity: selected ? 1 : 0,
                               }}
-                              className="flex h-6 w-6 items-center justify-center rounded-full border border-[#f0b6e5]/50 bg-[#f0b6e5]/10 text-[10px]"
+                              className="flex h-6 w-6 items-center justify-center rounded-full border border-[#e5b198]/50 bg-[#e5b198]/10 text-[10px]"
                             >
                               ✓
                             </motion.span>
@@ -454,8 +454,8 @@ export default function StartProjectPage() {
                               transition-opacity duration-500
                               ${
                                 selected
-                                  ? "bg-[#e39ad6]/25 opacity-100"
-                                  : "bg-[#a57cff]/20 opacity-0 group-hover:opacity-100"
+                                  ? "bg-[#b7826c]/25 opacity-100"
+                                  : "bg-[#8da48e]/20 opacity-0 group-hover:opacity-100"
                               }
                             `}
                           />
@@ -474,9 +474,9 @@ export default function StartProjectPage() {
                         opacity: 1,
                         y: 0,
                       }}
-                      className="mt-8 border-l border-[#e8b9e5]/30 pl-5"
+                      className="mt-8 border-l border-[#e5b198]/30 pl-5"
                     >
-                      <p className="text-sm leading-6 text-[#e9def6]/65">
+                      <p className="text-sm leading-6 text-[#e6e9df]/65">
                         {selectedService.description}
                       </p>
                     </motion.div>
@@ -505,13 +505,13 @@ export default function StartProjectPage() {
                     duration: 0.45,
                   }}
                 >
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d7cdf2]/55">
+                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#e6e9df]/55">
                     Project Stage
                   </p>
 
                   <h2 className="max-w-4xl text-5xl font-medium tracking-[-0.05em] md:text-7xl">
                     Where are you
-                    <span className="text-[#d8b4ff]/70">
+                    <span className="text-[#d1b4a1]/70">
                       {" "}
                       right now?
                     </span>
@@ -538,7 +538,7 @@ export default function StartProjectPage() {
                             px-7 text-left transition-all duration-500
                             ${
                               selected
-                                ? "border-[#e8b9e5]/45 bg-[#6650b7]/35"
+                                ? "border-[#e5b198]/45 bg-[#35463d]/35"
                                 : "border-white/12 bg-white/[0.03] hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.05]"
                             }
                           `}
@@ -556,7 +556,7 @@ export default function StartProjectPage() {
                           <span
                             className={
                               selected
-                                ? "text-[#f0b6e5]"
+                                ? "text-[#e5b198]"
                                 : "text-white/25 transition group-hover:text-white"
                             }
                           >
@@ -590,13 +590,13 @@ export default function StartProjectPage() {
                     duration: 0.45,
                   }}
                 >
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d7cdf2]/55">
+                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#e6e9df]/55">
                     Project Direction
                   </p>
 
                   <h2 className="max-w-4xl text-5xl font-medium tracking-[-0.05em] md:text-7xl">
                     What&apos;s the main
-                    <span className="text-[#f0a6da]/80">
+                    <span className="text-[#e5b198]/80">
                       {" "}
                       goal?
                     </span>
@@ -624,7 +624,7 @@ export default function StartProjectPage() {
                             transition-all duration-300
                             ${
                               form.goal === goal
-                                ? "border-[#f0b6e5]/55 bg-[#7258c5]/45 text-white"
+                                ? "border-[#e5b198]/55 bg-[#485a4e]/45 text-white"
                                 : "border-white/15 bg-white/[0.03] text-white/60 hover:border-white/30 hover:text-white"
                             }
                           `}
@@ -666,7 +666,7 @@ export default function StartProjectPage() {
                               transition-all duration-500
                               ${
                                 selected
-                                  ? "border-[#f0b6e5]/50 bg-[#6650b7]/35 shadow-[0_15px_50px_rgba(205,135,255,0.10)]"
+                                  ? "border-[#e5b198]/50 bg-[#35463d]/35 shadow-[0_15px_50px_rgba(229,177,152,0.10)]"
                                   : "border-white/12 bg-white/[0.03] hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.05]"
                               }
                             `}
@@ -679,7 +679,7 @@ export default function StartProjectPage() {
                               <span
                                 className={
                                   selected
-                                    ? "text-[#f0b6e5]"
+                                    ? "text-[#e5b198]"
                                     : "text-white/20 transition group-hover:text-white/60"
                                 }
                               >
@@ -716,13 +716,13 @@ export default function StartProjectPage() {
                     y: -20,
                   }}
                 >
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d7cdf2]/55">
+                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#e6e9df]/55">
                     Your Idea
                   </p>
 
                   <h2 className="max-w-4xl text-5xl font-medium tracking-[-0.05em] md:text-7xl">
                     Tell me about
-                    <span className="text-[#d8b4ff]/75">
+                    <span className="text-[#d1b4a1]/75">
                       {" "}
                       the project.
                     </span>
@@ -750,7 +750,7 @@ export default function StartProjectPage() {
                         p-7 text-base leading-7 text-white
                         outline-none backdrop-blur-xl transition
                         placeholder:text-white/25
-                        focus:border-[#e8b9e5]/40
+                        focus:border-[#e5b198]/40
                         focus:bg-white/[0.05]
                         focus:shadow-[0_20px_70px_rgba(190,130,255,0.10)]
                       "
@@ -780,14 +780,14 @@ export default function StartProjectPage() {
                     opacity: 0,
                   }}
                 >
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d7cdf2]/55">
+                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#e6e9df]/55">
                     Contact
                   </p>
 
                   <h2 className="max-w-4xl text-5xl font-medium tracking-[-0.05em] md:text-7xl">
                     Your project brief
 
-                    <span className="block bg-gradient-to-r from-[#f0a6da] via-[#d8b4ff] to-[#aaa0ff] bg-clip-text text-transparent">
+                    <span className="block bg-gradient-to-r from-[#e5b198] via-[#d1b4a1] to-[#b0c3ae] bg-clip-text text-transparent">
                       is almost ready.
                     </span>
                   </h2>
@@ -807,7 +807,7 @@ export default function StartProjectPage() {
                           w-full border-b border-white/15 bg-transparent
                           px-1 py-5 text-lg text-white outline-none
                           transition placeholder:text-white/30
-                          focus:border-[#e8b9e5]/50
+                          focus:border-[#e5b198]/50
                         "
                       />
 
@@ -825,7 +825,7 @@ export default function StartProjectPage() {
                           w-full border-b border-white/15 bg-transparent
                           px-1 py-5 text-lg text-white outline-none
                           transition placeholder:text-white/30
-                          focus:border-[#e8b9e5]/50
+                          focus:border-[#e5b198]/50
                         "
                       />
 
@@ -842,7 +842,7 @@ export default function StartProjectPage() {
                           w-full border-b border-white/15 bg-transparent
                           px-1 py-5 text-lg text-white outline-none
                           transition placeholder:text-white/30
-                          focus:border-[#e8b9e5]/50
+                          focus:border-[#e5b198]/50
                         "
                       />
 
@@ -871,7 +871,7 @@ export default function StartProjectPage() {
                     </div>
 
                     <div className="rounded-[1.75rem] border border-white/15 bg-white/[0.035] p-7 backdrop-blur-xl">
-                      <p className="text-[10px] uppercase tracking-[0.25em] text-[#d7cdf2]/45">
+                      <p className="text-[10px] uppercase tracking-[0.25em] text-[#e6e9df]/45">
                         Project Brief
                       </p>
 
@@ -931,8 +931,8 @@ export default function StartProjectPage() {
                 group inline-flex items-center gap-4
                 rounded-full bg-white px-7 py-4
                 text-xs font-medium uppercase tracking-[0.16em]
-                text-[#31236c] transition duration-300
-                hover:scale-[1.03] hover:bg-[#f5d8ef]
+                text-[#18211f] transition duration-300
+                hover:scale-[1.03] hover:bg-[#f2d1bd]
                 disabled:pointer-events-none disabled:opacity-30
               "
             >
@@ -952,11 +952,11 @@ export default function StartProjectPage() {
                 group inline-flex min-w-[210px] items-center
                 justify-center gap-4 rounded-full bg-white
                 px-7 py-4 text-xs font-medium uppercase
-                tracking-[0.16em] text-[#31236c]
-                shadow-[0_15px_60px_rgba(225,165,220,0.15)]
+                tracking-[0.16em] text-[#18211f]
+                shadow-[0_15px_60px_rgba(229,177,152,0.15)]
                 transition duration-300
-                hover:scale-[1.03] hover:bg-[#f5d8ef]
-                hover:shadow-[0_20px_80px_rgba(225,165,220,0.25)]
+                hover:scale-[1.03] hover:bg-[#f2d1bd]
+                hover:shadow-[0_20px_80px_rgba(229,177,152,0.25)]
                 disabled:pointer-events-none disabled:opacity-40
               "
             >
@@ -971,7 +971,7 @@ export default function StartProjectPage() {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    className="h-3 w-3 rounded-full border border-[#31236c]/30 border-t-[#31236c]"
+                    className="h-3 w-3 rounded-full border border-[#18211f]/30 border-t-[#18211f]"
                   />
 
                   Sending...
